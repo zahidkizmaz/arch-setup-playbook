@@ -1,0 +1,25 @@
+---
+config_packages:
+  - alacritty
+  - ctags
+  - direnv
+  - git
+  - kitty
+  - nvim
+  - pgcli
+  - qtile
+  - starship
+  - tmux
+  - xbindkeys
+  - xorg
+  - zsh
+
+pipx_packages:
+  - ansible-base
+  - pgcli
+  - black
+  - yamllint
+  - cookiecutter
+  - curlylint
+  - poetry
+  - pre-commit

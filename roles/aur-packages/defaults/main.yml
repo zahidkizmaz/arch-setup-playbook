@@ -1,0 +1,8 @@
+---
+aur_packages:
+  - paru
+  - nerd-fonts-complete
+  - asdf-vm
+  - librewolf-bin
+  - fluent-reader
+  - xbindkeys_config-gtk2

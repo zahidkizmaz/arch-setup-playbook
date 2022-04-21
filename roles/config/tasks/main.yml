@@ -1,0 +1,53 @@
+---
+- name: Get config files from GitHub
+  git:
+    repo: "https://github.com/zahidkizmaz/dotfiles"
+    dest: "~/Projects/dotfiles/"
+    clone: true
+
+- name: Create .config folder
+  file:
+    path: ~/.config/
+    state: directory
+
+- name: Create symlinks of config files
+  command: chdir=~/Projects/dotfiles/ stow --adopt -RSt ~ {{ item }}
+  with_items: "{{ config_packages }}"
+
+- name: Delete {{ ansible_user }} .bash_profile
+  file:
+    path: ~/.bash_profile
+    state: absent
+
+- name: Set zsh as default shell for {{ ansible_user }}
+  command: chsh -s /usr/bin/zsh {{ ansible_user }}
+  become: true
+
+- name: Install zsh plugins
+  git:
+    repo: "{{ item.repo }}"
+    dest: "{{ item.dest }}"
+    clone: true
+  with_items:
+    -
+      repo: https://github.com/zsh-users/zsh-autosuggestions
+      dest: "~/.config/zsh/plugins/zsh-autosuggestions"
+    -
+      repo: https://github.com/zsh-users/zsh-syntax-highlighting
+      dest: "~/.config/zsh/plugins/zsh-syntax-highlighting"
+
+- name: Clean pipx packages
+  command: pipx uninstall-all
+
+- name: Install pipx packages
+  command: pipx install {{ item }}
+  with_items: "{{ pipx_packages }}"
+
+- name: Install tmux package manager TPM
+  git:
+    repo: https://github.com/tmux-plugins/tpm
+    dest: ~/.tmux/plugins/tpm
+    clone: true
+
+- name: Install tmux packages
+  command: ~/.tmux/plugins/tpm/bin/install_plugins

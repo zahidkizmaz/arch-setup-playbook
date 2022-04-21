@@ -1,0 +1,7 @@
+---
+- name: Setup Dev environment for Arch Linux
+  hosts: all
+  roles:
+    - role: aur-packages
+    - role: pacman
+    - role: config
