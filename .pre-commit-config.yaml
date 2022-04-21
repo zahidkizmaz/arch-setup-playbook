@@ -1,0 +1,25 @@
+---
+repos:
+  - repo: git@github.com:pre-commit/pre-commit-hooks
+    rev: v4.2.0
+    hooks:
+      - id: trailing-whitespace
+      - id: check-toml
+      - id: check-json
+      - id: end-of-file-fixer
+      - id: debug-statements
+      - id: check-added-large-files
+  - repo: local
+    hooks:
+      - id: check-yaml
+        name: yamllint
+        entry: yamllint
+        args: ["--strict"]
+        language: system
+        files: \.(yml|yaml)$
+      - id: shfmt
+        name: shfmt
+        entry: shfmt
+        args: [-i=2, -ci, -bn]
+        language: system
+        files: '(.*\.sh$)|(.*rc$)'
