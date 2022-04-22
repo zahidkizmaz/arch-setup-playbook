@@ -13,6 +13,7 @@ config_packages:
   - xbindkeys
   - xorg
   - zsh
+  - btop
 
 pipx_packages:
   - ansible-base
