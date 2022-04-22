@@ -20,4 +20,4 @@
     state: present
   become: true
   become_user: aur_builder
-  with_items: "{{ aur_packages }}"
+  loop: "{{ aur_packages }}"

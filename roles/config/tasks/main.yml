@@ -12,7 +12,7 @@
 
 - name: Create symlinks of config files
   command: chdir=~/Projects/dotfiles/ stow --adopt -RSt ~ {{ item }}
-  with_items: "{{ config_packages }}"
+  loop: "{{ config_packages }}"
 
 - name: Delete {{ ansible_user }} .bash_profile
   file:
@@ -28,7 +28,7 @@
     repo: "{{ item.repo }}"
     dest: "{{ item.dest }}"
     clone: true
-  with_items:
+  loop:
     -
       repo: https://github.com/zsh-users/zsh-autosuggestions
       dest: "~/.config/zsh/plugins/zsh-autosuggestions"
@@ -41,7 +41,10 @@
 
 - name: Install pipx packages
   command: pipx install {{ item }}
-  with_items: "{{ pipx_packages }}"
+  loop: "{{ pipx_packages }}"
+
+- name: Inject neovim and pylsp-mypy package to python-lsp-server env
+  command: pipx inject python-lsp-server neovim pylsp-mypy
 
 - name: Install tmux package manager TPM
   git:

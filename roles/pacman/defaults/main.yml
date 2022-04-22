@@ -43,3 +43,10 @@ pacman_packages:
   - noto-fonts
   - stylua
   - shellcheck
+  - zip
+  - unzip
+  - vlc
+  - pulseaudio
+  - pulseaudio-alsa
+  - pulseaudio-bluetooth
+  - pavucontrol
