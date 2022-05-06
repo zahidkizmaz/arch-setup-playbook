@@ -2,16 +2,30 @@
 
 ## How to run
 
-- Make sure python3 is installed in the destination machine.
-- Make sure ansible is installed in the host machine.
-- Make sure host machine can connect to destination machine via ssh.
+### Destination Machine:
 
-#### Dependencies
-- openssh
-- python
-- python-pip
+After a fresh arch installation before running the playbook you may follow these steps:
 
-### Create an inventory file
+1. Add your non root user to sudo (wheel) group. This user also will be used as ansible user.
+2. Install dependencies:
+    ```
+    pacman -S openssh python python-pip
+    ```
+3. Enable ssh service:
+    ```
+    systemctl enable sshd
+    ```
+
+### Host Machine:
+
+Add host machine's ssh keys to destination machine.
+
+```
+ssh-copy-id {{user name}}@{{ ip of the destination machine}}
+
+```
+
+#### Create an inventory file
 
 ```yml
 ---
@@ -22,7 +36,7 @@ all:
 
 ```
 
-### Run the playbook
+#### Run the playbook
 ```
 ansible-playbook -i inventory.yml main.yml -K
 ```
