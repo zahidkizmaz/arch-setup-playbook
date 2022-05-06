@@ -2,9 +2,14 @@
 
 ## How to run
 
-- Make sure ansible is installed in the host machine.
 - Make sure python3 is installed in the destination machine.
+- Make sure ansible is installed in the host machine.
 - Make sure host machine can connect to destination machine via ssh.
+
+#### Dependencies
+- openssh
+- python
+- python-pip
 
 ### Create an inventory file
 

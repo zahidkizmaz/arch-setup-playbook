@@ -3,8 +3,6 @@ pacman_packages:
   - git
   - base-devel
   - arandr
-  - lightdm
-  - lightdm-gtk-greeter
   - qtile
   - network-manager-applet
   - blueman

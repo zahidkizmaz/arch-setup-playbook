@@ -21,3 +21,9 @@
   become: true
   become_user: aur_builder
   loop: "{{ aur_packages }}"
+
+- name: Enable ly service
+  become: true
+  service:
+    name: "ly.service"
+    enabled: true

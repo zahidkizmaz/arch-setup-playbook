@@ -54,3 +54,29 @@
 
 - name: Install tmux packages
   command: ~/.tmux/plugins/tpm/bin/install_plugins
+
+- name: Install asdf-vm plugins
+  shell:
+    cmd: /opt/asdf-vm/bin/asdf plugin add {{ item }}
+    executable: /bin/zsh
+  loop: "{{ vm_asdf_plugins }}"
+
+- name: Set up nodejs with asdf-vm
+  shell:
+    cmd: >
+      source {{ zshrc_location }} &&
+      asdf install nodejs latest &&
+      asdf global nodejs latest
+    executable: /bin/zsh
+  vars:
+    zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"
+
+- name: Install npm packages
+  shell:
+    cmd: >
+      source {{ zshrc_location }} &&
+      npm install -g {{ item }}
+    executable: /bin/zsh
+  loop: "{{ npm_packages }}"
+  vars:
+    zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"
