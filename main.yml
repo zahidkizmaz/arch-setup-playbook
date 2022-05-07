@@ -10,4 +10,4 @@
     - name: Restart the machine
       become: true
       reboot:
-        timeout: 3000
+        reboot_timeout: 3000

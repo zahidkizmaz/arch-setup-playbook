@@ -7,3 +7,4 @@ aur_packages:
   - librewolf-bin
   - fluent-reader
   - xbindkeys_config-gtk2
+  - spotify

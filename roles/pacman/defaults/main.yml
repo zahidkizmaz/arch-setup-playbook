@@ -51,3 +51,6 @@ pacman_packages:
   - pavucontrol
   - copyq
   - docker
+  - libreoffice-still
+  - signal-desktop
+  - telegram-desktop
