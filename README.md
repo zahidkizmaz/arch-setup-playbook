@@ -4,9 +4,9 @@
 
 ### Destination Machine:
 
-After a fresh arch installation before running the playbook you may follow these steps:
+After a fresh arch installation and before running the playbook, you may follow these steps:
 
-1. Add your non root user to sudo (wheel) group. This user also will be used as ansible user.
+1. Add your non-root user to sudo (wheel) group. This user also will be used as an ansible user.
 2. Install dependencies:
     ```
     pacman -S openssh python python-pip
@@ -18,7 +18,7 @@ After a fresh arch installation before running the playbook you may follow these
 
 ### Host Machine:
 
-Add host machine's ssh keys to destination machine.
+Add the host machine's ssh keys to the destination machine.
 
 ```
 ssh-copy-id {{user name}}@{{ ip of the destination machine}}
