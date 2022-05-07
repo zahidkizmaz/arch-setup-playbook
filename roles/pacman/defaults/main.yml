@@ -1,19 +1,9 @@
 ---
 pacman_packages:
+  ############################
+  ######## DEV TOOLS #########
+  ############################
   - git
-  - base-devel
-  - arandr
-  - qtile
-  - network-manager-applet
-  - blueman
-  - pcmanfm
-  - picom
-  - nitrogen
-  - rofi
-  - gnupg
-  - firefox
-  - xterm
-  - kitty
   - zsh
   - stow
   - starship
@@ -29,7 +19,6 @@ pacman_packages:
   - tree
   - jq
   - shfmt
-  - xclip
   - tmux
   - direnv
   - difftastic
@@ -38,19 +27,40 @@ pacman_packages:
   - postgresql
   - curl
   - wget
-  - brightnessctl
   - noto-fonts
   - stylua
   - shellcheck
   - zip
   - unzip
-  - mpv
+  - docker
+  - docker-compose
+  ############################
+  ######## ARCH TOOLS ########
+  ############################
+  - base-devel
+  - qtile
+  - brightnessctl
   - pulseaudio
   - pulseaudio-alsa
   - pulseaudio-bluetooth
   - pavucontrol
+  - picom
+  - nitrogen
+  - rofi
+  - gnupg
   - copyq
-  - docker
+  - xclip
+  ############################
+  ### DESKTOP APPLICATIONS ###
+  ############################
+  - arandr
+  - mpv
   - libreoffice-still
   - signal-desktop
   - telegram-desktop
+  - firefox
+  - xterm
+  - kitty
+  - pcmanfm
+  - network-manager-applet
+  - blueman
