@@ -5,3 +5,9 @@
     - role: aur-packages
     - role: pacman
     - role: config
+
+  tasks:
+    - name: Restart the machine
+      become: true
+      reboot:
+        timeout: 3000

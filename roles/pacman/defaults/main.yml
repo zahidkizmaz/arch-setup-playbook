@@ -50,3 +50,4 @@ pacman_packages:
   - pulseaudio-bluetooth
   - pavucontrol
   - copyq
+  - docker
