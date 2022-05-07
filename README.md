@@ -36,6 +36,11 @@ all:
 
 ```
 
+#### Install playbook dependencies
+```
+ansible-galaxy install -r requirements.yml
+```
+
 #### Run the playbook
 ```
 ansible-playbook -i inventory.yml main.yml -K
