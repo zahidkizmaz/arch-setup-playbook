@@ -10,9 +10,11 @@ config_packages:
   - qtile
   - starship
   - tmux
+  - rofi
   - xbindkeys
   - xorg
   - zsh
+  - fzf
   - btop
 
 pipx_packages:
@@ -24,4 +26,17 @@ pipx_packages:
   - curlylint
   - poetry
   - pre-commit
+  - isort
+  - djhtml
+  - flake8
   - "python-lsp-server[all]"
+
+vm_asdf_plugins:
+  - python
+  - nodejs
+  - golang
+
+npm_packages:
+  - neovim
+  - eslint_d
+  - "@fsouza/prettierd"

@@ -3,8 +3,6 @@ pacman_packages:
   - git
   - base-devel
   - arandr
-  - lightdm
-  - lightdm-gtk-greeter
   - qtile
   - network-manager-applet
   - blueman
@@ -12,6 +10,7 @@ pacman_packages:
   - picom
   - nitrogen
   - rofi
+  - gnupg
   - firefox
   - xterm
   - kitty
@@ -45,8 +44,9 @@ pacman_packages:
   - shellcheck
   - zip
   - unzip
-  - vlc
+  - mpv
   - pulseaudio
   - pulseaudio-alsa
   - pulseaudio-bluetooth
   - pavucontrol
+  - copyq

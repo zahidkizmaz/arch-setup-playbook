@@ -19,10 +19,6 @@
     path: ~/.bash_profile
     state: absent
 
-- name: Set zsh as default shell for {{ ansible_user }}
-  command: chsh -s /usr/bin/zsh {{ ansible_user }}
-  become: true
-
 - name: Install zsh plugins
   git:
     repo: "{{ item.repo }}"
@@ -35,6 +31,10 @@
     -
       repo: https://github.com/zsh-users/zsh-syntax-highlighting
       dest: "~/.config/zsh/plugins/zsh-syntax-highlighting"
+
+- name: Set zsh as default shell for {{ ansible_user }}
+  command: chsh -s /usr/bin/zsh {{ ansible_user }}
+  become: true
 
 - name: Clean pipx packages
   command: pipx uninstall-all
@@ -54,3 +54,34 @@
 
 - name: Install tmux packages
   command: ~/.tmux/plugins/tpm/bin/install_plugins
+
+- name: Set up asdf-vm plugins
+  shell:
+    cmd: >
+      source {{ zshrc_location }} &&
+      asdf plugin add {{ item }} &&
+      asdf install {{ item }} latest &&
+      asdf global {{ item }} latest
+    executable: /bin/zsh
+  vars:
+    zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"
+  loop: "{{ vm_asdf_plugins }}"
+
+- name: Install npm packages
+  shell:
+    cmd: >
+      source {{ zshrc_location }} &&
+      npm install -g {{ item }}
+    executable: /bin/zsh
+  loop: "{{ npm_packages }}"
+  vars:
+    zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"
+
+- name: Install nvim packages
+  shell:
+    cmd: >
+      source {{ zshrc_location }} &&
+      nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+    executable: /bin/zsh
+  vars:
+    zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"

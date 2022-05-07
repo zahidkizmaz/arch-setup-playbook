@@ -1,6 +1,7 @@
 ---
 aur_packages:
   - paru
+  - ly
   - nerd-fonts-complete
   - asdf-vm
   - librewolf-bin

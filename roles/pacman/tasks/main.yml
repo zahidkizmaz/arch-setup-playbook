@@ -17,9 +17,3 @@
   pacman:
     name: "{{ pacman_packages }}"
     state: present
-
-- name: Enable lightdm service
-  become: true
-  service:
-    name: lightdm
-    enabled: true
