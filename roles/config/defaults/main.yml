@@ -14,6 +14,7 @@ config_packages:
   - xbindkeys
   - xorg
   - zsh
+  - fzf
 
 pipx_packages:
   - ansible-base
@@ -32,6 +33,7 @@ pipx_packages:
 vm_asdf_plugins:
   - python
   - nodejs
+  - golang
 
 npm_packages:
   - neovim
