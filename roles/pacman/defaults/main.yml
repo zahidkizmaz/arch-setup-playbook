@@ -64,3 +64,5 @@ pacman_packages:
   - pcmanfm
   - network-manager-applet
   - blueman
+  - sxiv
+  - gimp
