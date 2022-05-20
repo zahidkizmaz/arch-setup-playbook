@@ -50,12 +50,13 @@ pacman_packages:
   - gnupg
   - copyq
   - xclip
+  - dunst
+  - neofetch
   ############################
   ### DESKTOP APPLICATIONS ###
   ############################
   - arandr
   - mpv
-  - libreoffice-still
   - signal-desktop
   - telegram-desktop
   - firefox
@@ -64,3 +65,5 @@ pacman_packages:
   - pcmanfm
   - network-manager-applet
   - blueman
+  - sxiv
+  - gimp

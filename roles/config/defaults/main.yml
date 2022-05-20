@@ -16,6 +16,7 @@ config_packages:
   - zsh
   - fzf
   - btop
+  - dunst
 
 pipx_packages:
   - ansible-base
