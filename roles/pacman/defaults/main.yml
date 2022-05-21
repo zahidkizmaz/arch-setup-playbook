@@ -34,6 +34,7 @@ pacman_packages:
   - unzip
   - docker
   - docker-compose
+  - viu
   ############################
   ######## ARCH TOOLS ########
   ############################
