@@ -11,7 +11,8 @@
     state: directory
 
 - name: Create symlinks of config files
-  command: chdir=~/Projects/dotfiles/ stow --adopt -RSt ~ {{ item }}
+  command: stow --adopt -RSt ~ {{ item }}
+  chdir: ~/Projects/dotfiles/
   loop: "{{ config_packages }}"
 
 - name: Delete {{ ansible_user }} .bash_profile
@@ -33,8 +34,9 @@
       dest: "~/.config/zsh/plugins/zsh-syntax-highlighting"
 
 - name: Set zsh as default shell for {{ ansible_user }}
-  command: chsh -s /usr/bin/zsh {{ ansible_user }}
-  become: true
+  user:
+    name: "{{ ansible_user }}"
+    shell: /usr/bin/zsh
 
 - name: Clean pipx packages
   command: pipx uninstall-all

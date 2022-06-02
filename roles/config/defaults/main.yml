@@ -30,6 +30,7 @@ pipx_packages:
   - isort
   - djhtml
   - flake8
+  - lookatme
   - "python-lsp-server[all]"
 
 vm_asdf_plugins:
