@@ -1,0 +1,7 @@
+---
+- name: Enable ly service
+  become: true
+  service:
+    name: "ly.service"
+    enabled: true
+  listen: "AUR packages installed"

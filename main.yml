@@ -2,11 +2,15 @@
 - name: Setup Dev environment for Arch Linux
   hosts: all
   roles:
+    - role: setup-user
     - role: aur-packages
     - role: pacman
     - role: config
 
   tasks:
+    - name: Flush handlers
+      meta: flush_handlers
+
     - name: Restart the machine
       become: true
       reboot:

@@ -12,24 +12,12 @@
     update_cache: true
     upgrade: true
 
-- name: Install packages
+- name: Install pacman packages
   become: true
   pacman:
     name: "{{ pacman_packages }}"
     state: present
-
-- name: Add "{{ ansible_user }}" to docker group
-  become: true
-  user:
-    name: "{{ ansible_user }}"
-    groups: docker
-    append: true
-
-- name: Enable docker service
-  become: true
-  service:
-    name: "docker.service"
-    enabled: true
+  notify: "pacman packages installed"
 
 - name: Find packages to clean
   become: true

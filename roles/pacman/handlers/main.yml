@@ -1,0 +1,7 @@
+---
+- name: Enable docker service
+  become: true
+  service:
+    name: "docker.service"
+    enabled: true
+  listen: "pacman packages installed"
