@@ -4,6 +4,7 @@ pacman_packages:
   ######## DEV TOOLS #########
   ############################
   - git
+  - man-db
   - zsh
   - stow
   - starship
@@ -41,6 +42,7 @@ pacman_packages:
   - base-devel
   - qtile
   - brightnessctl
+  - alsa-utils
   - pulseaudio
   - pulseaudio-alsa
   - pulseaudio-bluetooth
