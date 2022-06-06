@@ -1,0 +1,12 @@
+---
+- name: Enable libvirtd.service
+  become: true
+  service:
+    name: "libvirtd.service"
+    enabled: true
+  listen: "pacman packages installed"
+
+- name: Set virt network autostart for a VM
+  become: true
+  command: virsh net-autostart default
+  listen: "reboot done"

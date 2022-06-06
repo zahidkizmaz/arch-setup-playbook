@@ -15,3 +15,4 @@
       become: true
       reboot:
         reboot_timeout: 3000
+      notify: "reboot done"

@@ -5,3 +5,10 @@
     name: "docker.service"
     enabled: true
   listen: "pacman packages installed"
+
+- name: Enable cups service
+  become: true
+  service:
+    name: "cups.service"
+    enabled: true
+  listen: "pacman packages installed"

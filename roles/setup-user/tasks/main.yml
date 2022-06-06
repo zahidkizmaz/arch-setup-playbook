@@ -1,5 +1,5 @@
 ---
-- name: Allow {{ ansible_user }} user to run `sudo pacman` without a password
+- name: Allow {{ ansible_user }} to run `sudo pacman` without a password
   community.general.sudoers:
     name: "run-pacman-no-password"
     user: "{{ ansible_user }}"

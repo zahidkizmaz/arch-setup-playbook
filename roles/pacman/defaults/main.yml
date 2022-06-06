@@ -4,6 +4,7 @@ pacman_packages:
   ######## DEV TOOLS #########
   ############################
   - git
+  - man-db
   - zsh
   - stow
   - starship
@@ -41,6 +42,7 @@ pacman_packages:
   - base-devel
   - qtile
   - brightnessctl
+  - alsa-utils
   - pulseaudio
   - pulseaudio-alsa
   - pulseaudio-bluetooth
@@ -53,6 +55,12 @@ pacman_packages:
   - xclip
   - dunst
   - neofetch
+  - playerctl
+  - bluez-utils
+  - cups
+  - cups-pdf
+  - gutenprints
+  - system-config-printer
   ############################
   ### DESKTOP APPLICATIONS ###
   ############################
@@ -68,3 +76,8 @@ pacman_packages:
   - blueman
   - sxiv
   - gimp
+  - virt-manager
+  - qemu-desktop
+  - libvirt
+  - edk2-ovmf
+  - dnsmasq
