@@ -59,7 +59,7 @@ pacman_packages:
   - bluez-utils
   - cups
   - cups-pdf
-  - gutenprints
+  - gutenprint
   - system-config-printer
   ############################
   ### DESKTOP APPLICATIONS ###
