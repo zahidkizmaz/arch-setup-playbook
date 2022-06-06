@@ -57,6 +57,10 @@ pacman_packages:
   - neofetch
   - playerctl
   - bluez-utils
+  - cups
+  - cups-pdf
+  - gutenprints
+  - system-config-printer
   ############################
   ### DESKTOP APPLICATIONS ###
   ############################
