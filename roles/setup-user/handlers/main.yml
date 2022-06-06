@@ -13,3 +13,11 @@
     groups: docker
     append: true
   listen: "pacman packages installed"
+
+- name: Add {{ ansible_user }} to libvirt group
+  become: true
+  user:
+    name: "{{ ansible_user }}"
+    groups: libvirt
+    append: true
+  listen: "pacman packages installed"

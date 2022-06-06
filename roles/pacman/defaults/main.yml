@@ -55,6 +55,8 @@ pacman_packages:
   - xclip
   - dunst
   - neofetch
+  - playerctl
+  - bluez-utils
   ############################
   ### DESKTOP APPLICATIONS ###
   ############################
@@ -70,3 +72,8 @@ pacman_packages:
   - blueman
   - sxiv
   - gimp
+  - virt-manager
+  - qemu-desktop
+  - libvirt
+  - edk2-ovmf
+  - dnsmasq
