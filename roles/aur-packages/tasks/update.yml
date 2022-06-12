@@ -1,0 +1,6 @@
+---
+- name: Update AUR packages
+  kewlfft.aur.aur:
+    aur_only: true
+    upgrade: true
+    update_cache: true

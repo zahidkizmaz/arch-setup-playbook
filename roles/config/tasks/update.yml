@@ -1,0 +1,45 @@
+---
+- name: Update zsh plugins
+  git:
+    repo: "{{ item.repo }}"
+    dest: "{{ item.dest }}"
+    clone: false
+    update: true
+  loop: "{{ zsh_plugins }}"
+
+- name: Update pipx packages
+  command: pipx reinstall-all
+
+- name: Update tmux packages
+  command: ~/.tmux/plugins/tpm/bin/update_plugins all
+
+- name: Update asdf plugins
+  shell:
+    cmd: >
+      source {{ zshrc_location }} &&
+      asdf plugin update --all
+    executable: /bin/zsh
+  vars:
+    zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"
+
+- name: Update nvim packages
+  shell:
+    cmd: >
+      source {{ zshrc_location }} &&
+      nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+    executable: /bin/zsh
+  vars:
+    zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"
+
+- name: Update nvim treesitter grammars
+  shell:
+    cmd: >
+      source {{ zshrc_location }} &&
+      nvim --headless
+      -c 'TSUpdateSync all'
+      -c 'autocmd User PackerComplete quitall'
+      -c 'PackerSync'
+      {{ zshrc_location }}
+    executable: /bin/zsh
+  vars:
+    zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"

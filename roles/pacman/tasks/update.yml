@@ -1,0 +1,20 @@
+---
+- name: Run the equivalent of "pacman -Syu"
+  become: true
+  pacman:
+    update_cache: true
+    upgrade: true
+
+- name: Find packages to clean
+  become: true
+  command: pacman -Qqdt
+  register: packages_to_clean
+  ignore_errors: true
+
+- name: Clean packages
+  become: true
+  pacman:
+    name: "{{ packages_to_clean.stdout_lines }}"
+    state: absent
+    extra_args: --recursive
+  when: packages_to_clean.stdout_lines != []
