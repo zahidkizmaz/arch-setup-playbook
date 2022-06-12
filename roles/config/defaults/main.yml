@@ -43,3 +43,9 @@ npm_packages:
   - neovim
   - eslint_d
   - "@fsouza/prettierd"
+
+zsh_plugins:
+  - repo: https://github.com/zsh-users/zsh-autosuggestions
+    dest: "~/.config/zsh/plugins/zsh-autosuggestions"
+  - repo: https://github.com/zsh-users/zsh-syntax-highlighting
+    dest: "~/.config/zsh/plugins/zsh-syntax-highlighting"

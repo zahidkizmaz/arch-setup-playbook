@@ -46,7 +46,27 @@ all:
 ansible-galaxy install -r requirements.yml
 ```
 
-#### Run the playbook
+#### Run the install playbook
 ```
-ansible-playbook -i inventory.yml main.yml -K
+ansible-playbook -K --inventory inventory.yml install.yml
+```
+
+### Update the system
+
+This updates all the packages installed by playbook. Such as:
+ - AUR packages
+ - pacman packages
+ - zsh plugins
+ - pipx packages
+ - asdf plugins
+ - nvim packages and tree sitter grammars
+
+#### Run the update playbook remotely
+```
+ansible-playbook -K --inventory inventory.yml update.yml
+```
+
+#### Run the update playbook locally
+```
+ansible-playbook -K --connection local --inventory localhost, update.yml
 ```
