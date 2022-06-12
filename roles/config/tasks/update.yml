@@ -22,16 +22,7 @@
   vars:
     zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"
 
-- name: Update nvim packages
-  shell:
-    cmd: >
-      source {{ zshrc_location }} &&
-      nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
-    executable: /bin/zsh
-  vars:
-    zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"
-
-- name: Update nvim treesitter grammars
+- name: Update nvim packages and treesitter grammars
   shell:
     cmd: >
       source {{ zshrc_location }} &&

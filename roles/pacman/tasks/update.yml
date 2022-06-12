@@ -11,7 +11,7 @@
   register: packages_to_clean
   ignore_errors: true
 
-- name: Clean packages
+- name: Clean packages {{ packages_to_clean.stdout }}
   become: true
   pacman:
     name: "{{ packages_to_clean.stdout_lines }}"
