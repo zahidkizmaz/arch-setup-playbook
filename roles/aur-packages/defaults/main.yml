@@ -1,11 +1,9 @@
 ---
 aur_packages:
-  - paru
   - ly
-  - nerd-fonts-complete
+  - all-repository-fonts
   - asdf-vm
   - librewolf-bin
   - onlyoffice-bin
-  - fluent-reader
   - xbindkeys_config-gtk2
   - spotify

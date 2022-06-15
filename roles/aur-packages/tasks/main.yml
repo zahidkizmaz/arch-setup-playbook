@@ -1,9 +1,17 @@
 ---
-- name: Run the equivalent of "pacman -Syu"
+- name: Install paru AUR helper
+  kewlfft.aur.aur:
+    name: paru
+    state: present
   become: true
-  pacman:
-    update_cache: true
+  become_user: "{{ ansible_user }}"
+
+- name: Update cache
+  kewlfft.aur.aur:
     upgrade: true
+    update_cache: true
+  become: true
+  become_user: "{{ ansible_user }}"
 
 - name: Install AUR packages
   kewlfft.aur.aur:

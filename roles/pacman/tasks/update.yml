@@ -2,8 +2,14 @@
 - name: Run the equivalent of "pacman -Syu"
   become: true
   pacman:
-    update_cache: true
     upgrade: true
+    update_cache: true
+  register: update_result
+
+- name: Show updated packages
+  ansible.builtin.debug:
+    var: update_result.packages
+  when: (update_result.packages | default(false))
 
 - name: Find packages to clean
   become: true
