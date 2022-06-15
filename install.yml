@@ -1,6 +1,10 @@
 ---
 - name: Setup Dev environment for Arch Linux
   hosts: all
+  pre_tasks:
+    - name: Update pacman packages
+      include_tasks:
+        file: roles/pacman/tasks/update.yml
   roles:
     - role: setup-user
     - role: aur-packages
