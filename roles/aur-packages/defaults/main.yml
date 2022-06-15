@@ -1,7 +1,7 @@
 ---
 aur_packages:
   - ly
-  - nerd-fonts-complete
+  - all-repository-fonts
   - asdf-vm
   - librewolf-bin
   - onlyoffice-bin

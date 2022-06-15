@@ -7,8 +7,8 @@
         file: roles/pacman/tasks/update.yml
   roles:
     - role: setup-user
-    - role: aur-packages
     - role: pacman
+    - role: aur-packages
     - role: config
 
   tasks:
