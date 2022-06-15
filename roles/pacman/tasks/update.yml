@@ -5,12 +5,11 @@
     upgrade: true
     update_cache: true
   register: update_result
-  changed_when: update_result.packages | length > 0
 
 - name: Show updated packages
   ansible.builtin.debug:
     var: update_result.packages
-  when: update_result.changed
+  when: (update_result.packages | default(false))
 
 - name: Find packages to clean
   become: true
