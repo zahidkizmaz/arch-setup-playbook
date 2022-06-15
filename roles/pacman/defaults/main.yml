@@ -81,3 +81,4 @@ pacman_packages:
   - libvirt
   - edk2-ovmf
   - dnsmasq
+  - flameshot
