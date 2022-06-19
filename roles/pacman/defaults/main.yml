@@ -16,7 +16,6 @@ pacman_packages:
   - git-delta
   - httpie
   - python-pipx
-  - hub
   - tree
   - jq
   - shfmt
@@ -28,7 +27,6 @@ pacman_packages:
   - postgresql
   - curl
   - wget
-  - noto-fonts
   - stylua
   - shellcheck
   - zip
@@ -82,3 +80,10 @@ pacman_packages:
   - edk2-ovmf
   - dnsmasq
   - flameshot
+  ############################
+  ## FONTS & ICONS & EMOJIS ##
+  ############################
+  - noto-fonts
+  - ttf-iosevka-nerd
+  - papirus-icon-theme
+  - ttf-jetbrains-mono

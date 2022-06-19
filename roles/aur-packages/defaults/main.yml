@@ -1,7 +1,6 @@
 ---
 aur_packages:
   - ly
-  - all-repository-fonts
   - asdf-vm
   - librewolf-bin
   - onlyoffice-bin
