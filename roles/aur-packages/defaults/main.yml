@@ -1,8 +1,11 @@
 ---
 aur_packages:
   - ly
+  - spotify
   - asdf-vm
   - librewolf-bin
   - onlyoffice-bin
   - xbindkeys_config-gtk2
-  - spotify
+  - nerd-fonts-noto
+  - noto-fonts-emoji-blob
+  - nerd-fonts-jetbrains-mono

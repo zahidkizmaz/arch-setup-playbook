@@ -48,6 +48,7 @@ pacman_packages:
   - picom
   - nitrogen
   - rofi
+  - autorandr
   - gnupg
   - copyq
   - xclip
@@ -67,7 +68,6 @@ pacman_packages:
   - signal-desktop
   - telegram-desktop
   - firefox
-  - xterm
   - kitty
   - pcmanfm
   - network-manager-applet
@@ -80,10 +80,4 @@ pacman_packages:
   - edk2-ovmf
   - dnsmasq
   - flameshot
-  ############################
-  ## FONTS & ICONS & EMOJIS ##
-  ############################
-  - noto-fonts
-  - ttf-iosevka-nerd
   - papirus-icon-theme
-  - ttf-jetbrains-mono
