@@ -1,0 +1,22 @@
+---
+- name: Set up asdf-vm plugins
+  shell:
+    cmd: >
+      source {{ zshrc_location }} &&
+      asdf plugin add {{ item }} &&
+      asdf install {{ item }} latest &&
+      asdf global {{ item }} latest
+    executable: /bin/zsh
+  vars:
+    zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"
+  loop: "{{ vm_asdf_plugins }}"
+
+- name: Install npm packages
+  shell:
+    cmd: >
+      source {{ zshrc_location }} &&
+      npm install -g {{ item }}
+    executable: /bin/zsh
+  loop: "{{ npm_packages }}"
+  vars:
+    zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"

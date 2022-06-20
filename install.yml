@@ -7,9 +7,16 @@
         file: roles/pacman/tasks/update.yml
   roles:
     - role: setup-user
+      tags: setup-user
+
     - role: pacman
+      tags: pacman
+
     - role: aur-packages
+      tags: aur
+
     - role: config
+      tags: config
 
   tasks:
     - name: Flush handlers
