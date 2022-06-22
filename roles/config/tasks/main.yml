@@ -1,108 +1,42 @@
 ---
-- name: Get config files from GitHub
-  git:
-    repo: "https://github.com/zahidkizmaz/dotfiles"
-    dest: "~/Projects/dotfiles/"
-    clone: true
+- name: Setup libvirt and qemu
+  include_tasks:
+    file: libvirt.yml
+    apply:
+      tags: libvirt
 
-- name: Create .config folder
-  file:
-    path: ~/.config/
-    state: directory
+- name: Create dotfiles
+  include_tasks:
+    file: dotfiles.yml
+    apply:
+      tags: dotfiles
 
-- name: Create symlinks of config files
-  command: stow --adopt -RSt ~ {{ item }}
-  args:
-    chdir: ~/Projects/dotfiles/
-  loop: "{{ config_packages }}"
-
-- name: Install zsh plugins
-  git:
-    repo: "{{ item.repo }}"
-    dest: "{{ item.dest }}"
-    clone: true
-  loop: "{{ zsh_plugins }}"
-
-- name: Clean pipx packages
-  command: pipx uninstall-all
+- name: Setup ZSH
+  include_tasks:
+    file: zsh.yml
+    apply:
+      tags: zsh
 
 - name: Install pipx packages
-  command: pipx install {{ item }}
-  loop: "{{ pipx_packages }}"
+  include_tasks:
+    file: pipx.yml
+    apply:
+      tags: pipx
 
-- name: Inject neovim and pylsp-mypy package to python-lsp-server env
-  command: pipx inject python-lsp-server neovim pylsp-mypy
+- name: Setup tmux
+  include_tasks:
+    file: tmux.yml
+    apply:
+      tags: tmux
 
-- name: Install tmux package manager TPM
-  git:
-    repo: https://github.com/tmux-plugins/tpm
-    dest: ~/.tmux/plugins/tpm
-    clone: true
+- name: Install asdf-vm managed runtimes and packages
+  include_tasks:
+    file: asdf-vm.yml
+    apply:
+      tags: asdf-vm
 
-- name: Install tmux packages
-  command: ~/.tmux/plugins/tpm/bin/install_plugins
-
-- name: Set up asdf-vm plugins
-  shell:
-    cmd: >
-      source {{ zshrc_location }} &&
-      asdf plugin add {{ item }} &&
-      asdf install {{ item }} latest &&
-      asdf global {{ item }} latest
-    executable: /bin/zsh
-  vars:
-    zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"
-  loop: "{{ vm_asdf_plugins }}"
-
-- name: Install npm packages
-  shell:
-    cmd: >
-      source {{ zshrc_location }} &&
-      npm install -g {{ item }}
-    executable: /bin/zsh
-  loop: "{{ npm_packages }}"
-  vars:
-    zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"
-
-- name: Install nvim packages
-  shell:
-    cmd: >
-      source {{ zshrc_location }} &&
-      nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
-    executable: /bin/zsh
-  vars:
-    zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"
-
-- name: Install nvim treesitter grammars
-  shell:
-    cmd: >
-      source {{ zshrc_location }} &&
-      nvim --headless
-      -c 'TSInstallSync all'
-      -c 'autocmd User PackerComplete quitall'
-      -c 'PackerSync'
-      {{ zshrc_location }}
-    executable: /bin/zsh
-  vars:
-    zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"
-
-- name: Set the UNIX domain socket ownership to libvirt
-  become: true
-  lineinfile:
-    path: /etc/libvirt/libvirtd.conf
-    regexp: 'unix_sock_group'
-    line: unix_sock_group = 'libvirt'
-
-- name: Set the UNIX socket permission to read and write.
-  become: true
-  lineinfile:
-    path: /etc/libvirt/libvirtd.conf
-    regexp: 'unix_sock_rw_perms'
-    line: unix_sock_rw_perms = '0770'
-
-- name: Set the UNIX socket permission to read and write.
-  become: true
-  lineinfile:
-    path: /etc/libvirt/qemu.conf
-    regexp: 'user = "libvirt-qemu"'
-    line: 'user = "{{ ansible_user }}"'
+- name: Setup neovim
+  include_tasks:
+    file: neovim.yml
+    apply:
+      tags: neovim

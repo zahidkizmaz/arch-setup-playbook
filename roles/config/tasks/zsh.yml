@@ -1,0 +1,7 @@
+---
+- name: Install zsh plugins
+  git:
+    repo: "{{ item.repo }}"
+    dest: "{{ item.dest }}"
+    clone: true
+  loop: "{{ zsh_plugins }}"

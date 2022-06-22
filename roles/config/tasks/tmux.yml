@@ -1,0 +1,9 @@
+---
+- name: Install tmux package manager TPM
+  git:
+    repo: https://github.com/tmux-plugins/tpm
+    dest: ~/.tmux/plugins/tpm
+    clone: true
+
+- name: Install tmux packages
+  command: ~/.tmux/plugins/tpm/bin/install_plugins

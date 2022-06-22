@@ -1,0 +1,10 @@
+---
+- name: Clean pipx packages
+  command: pipx uninstall-all
+
+- name: Install pipx packages
+  command: pipx install {{ item }}
+  loop: "{{ pipx_packages }}"
+
+- name: Inject neovim and pylsp-mypy package to python-lsp-server env
+  command: pipx inject python-lsp-server neovim pylsp-mypy
