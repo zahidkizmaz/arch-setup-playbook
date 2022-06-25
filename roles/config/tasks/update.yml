@@ -8,7 +8,7 @@
   loop: "{{ zsh_plugins }}"
 
 - name: Update pipx packages
-  command: pipx reinstall-all
+  command: pipx upgrade-all
 
 - name: Update tmux packages
   command: ~/.tmux/plugins/tpm/bin/update_plugins all
