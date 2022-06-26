@@ -39,6 +39,9 @@ pacman_packages:
   ############################
   - base-devel
   - qtile
+  - polybar
+  - sxhkd
+  - bspwm
   - brightnessctl
   - alsa-utils
   - pulseaudio
