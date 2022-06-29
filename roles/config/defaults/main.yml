@@ -17,6 +17,9 @@ config_packages:
   - fzf
   - btop
   - dunst
+  - bspwm
+  - sxhkd
+  - polybar
 
 pipx_packages:
   - ansible-base
