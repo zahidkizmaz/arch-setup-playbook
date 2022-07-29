@@ -11,7 +11,6 @@ config_packages:
   - starship
   - tmux
   - rofi
-  - xbindkeys
   - xorg
   - zsh
   - fzf
