@@ -19,6 +19,7 @@ config_packages:
   - bspwm
   - sxhkd
   - polybar
+  - autorandr
 
 pipx_packages:
   - ansible-base
