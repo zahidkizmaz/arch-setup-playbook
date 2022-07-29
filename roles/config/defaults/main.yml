@@ -11,12 +11,14 @@ config_packages:
   - starship
   - tmux
   - rofi
-  - xbindkeys
   - xorg
   - zsh
   - fzf
   - btop
   - dunst
+  - bspwm
+  - sxhkd
+  - polybar
 
 pipx_packages:
   - ansible-base

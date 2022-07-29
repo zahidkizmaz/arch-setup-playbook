@@ -39,6 +39,9 @@ pacman_packages:
   ############################
   - base-devel
   - qtile
+  - polybar
+  - sxhkd
+  - bspwm
   - brightnessctl
   - alsa-utils
   - pulseaudio
@@ -60,6 +63,10 @@ pacman_packages:
   - cups-pdf
   - gutenprint
   - system-config-printer
+  - libxcb
+  - xcb-util
+  - xcb-util-wm
+  - xcb-util-keysyms
   ############################
   ### DESKTOP APPLICATIONS ###
   ############################

@@ -5,6 +5,7 @@ aur_packages:
   - asdf-vm
   - librewolf-bin
   - onlyoffice-bin
+  - pulseaudio-control
   - xbindkeys_config-gtk2
   - nerd-fonts-noto
   - noto-fonts-emoji-blob
