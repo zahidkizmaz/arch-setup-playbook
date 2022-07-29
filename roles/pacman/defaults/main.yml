@@ -88,3 +88,4 @@ pacman_packages:
   - dnsmasq
   - flameshot
   - papirus-icon-theme
+  - libreoffice-still

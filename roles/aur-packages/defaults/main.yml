@@ -4,9 +4,7 @@ aur_packages:
   - spotify
   - asdf-vm
   - librewolf-bin
-  - onlyoffice-bin
   - pulseaudio-control
-  - xbindkeys_config-gtk2
   - nerd-fonts-noto
   - noto-fonts-emoji-blob
   - nerd-fonts-jetbrains-mono

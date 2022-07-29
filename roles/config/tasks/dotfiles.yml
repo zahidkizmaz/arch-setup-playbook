@@ -10,6 +10,11 @@
     path: ~/.config/
     state: directory
 
+- name: Create autorandr config folder
+  file:
+    path: ~/.config/autorandr/
+    state: directory
+
 - name: Create symlinks to config files
   command: stow --adopt -RSt ~ {{ item }}
   args:
