@@ -1,5 +1,9 @@
 ---
 user_groups:
   - cups
+  - audio
+  - video
   - docker
   - libvirt
+  - optical
+  - storage

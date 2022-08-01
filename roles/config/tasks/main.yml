@@ -1,4 +1,10 @@
 ---
+- name: Creata system rules
+  include_tasks:
+    file: rules.yml
+    apply:
+      tags: rules
+
 - name: Setup libvirt and qemu
   include_tasks:
     file: libvirt.yml
