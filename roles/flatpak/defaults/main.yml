@@ -1,0 +1,4 @@
+---
+flatpak_packages:
+  - com.spotify.Client
+  - io.gitlab.librewolf-community

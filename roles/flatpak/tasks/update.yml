@@ -1,0 +1,3 @@
+---
+- name: Update flatpak packages
+  command: flatpak update
