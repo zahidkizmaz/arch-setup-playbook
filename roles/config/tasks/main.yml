@@ -11,6 +11,12 @@
     apply:
       tags: libvirt
 
+- name: Copy reflector config
+  include_tasks:
+    file: reflector.yml
+    apply:
+      tags: reflector
+
 - name: Create dotfiles
   include_tasks:
     file: dotfiles.yml

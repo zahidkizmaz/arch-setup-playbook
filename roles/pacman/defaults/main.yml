@@ -42,6 +42,7 @@ pacman_packages:
   - polybar
   - sxhkd
   - bspwm
+  - reflector
   - brightnessctl
   - alsa-utils
   - pulseaudio
