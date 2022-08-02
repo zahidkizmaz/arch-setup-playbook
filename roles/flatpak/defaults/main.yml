@@ -1,4 +1,5 @@
 ---
 flatpak_packages:
+  - com.brave.Browser
   - com.spotify.Client
   - io.gitlab.librewolf-community
