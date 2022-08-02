@@ -15,6 +15,9 @@
     - role: aur-packages
       tags: aur
 
+    - role: flatpak
+      tags: flatpak
+
     - role: config
       tags: config
 

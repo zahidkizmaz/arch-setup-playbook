@@ -1,5 +1,5 @@
 ---
-- name: Set up asdf-vm plugins
+- name: Setup asdf-vm plugins
   shell:
     cmd: >
       source {{ zshrc_location }} &&
