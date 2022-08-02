@@ -2,6 +2,7 @@
 aur_packages:
   - ly
   - asdf-vm
+  - auto-cpufreq
   - pulseaudio-control
   - nerd-fonts-noto
   - noto-fonts-emoji-blob
