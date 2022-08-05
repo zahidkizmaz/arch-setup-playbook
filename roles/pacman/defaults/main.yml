@@ -91,3 +91,4 @@ pacman_packages:
   - flameshot
   - papirus-icon-theme
   - libreoffice-still
+  - lxappearance
