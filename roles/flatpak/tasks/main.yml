@@ -9,5 +9,6 @@
 - name: Install flatpak packages
   community.general.flatpak:
     method: user
+    remote: flathub
     state: present
     name: "{{ flatpak_packages }}"
