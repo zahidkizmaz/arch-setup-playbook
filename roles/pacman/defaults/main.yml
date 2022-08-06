@@ -89,6 +89,7 @@ pacman_packages:
   - edk2-ovmf
   - dnsmasq
   - flameshot
+  - arc-gtk-theme
   - papirus-icon-theme
   - libreoffice-still
   - lxappearance

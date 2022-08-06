@@ -20,6 +20,7 @@ config_packages:
   - sxhkd
   - polybar
   - autorandr
+  - gtk-3.0
 
 pipx_packages:
   - ansible-base
