@@ -38,6 +38,8 @@ pacman_packages:
   ######## ARCH TOOLS ########
   ############################
   - base-devel
+  - polkit
+  - polkit-gnome
   - qtile
   - polybar
   - sxhkd
