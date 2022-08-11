@@ -1,9 +1,6 @@
 # My Personal Arch Linux Setup Playbook
 
-![desktop](https://user-images.githubusercontent.com/15658403/169669672-5638299d-fc7c-4a6d-80f3-6c1e8723eb8e.png)
-![neofetch](https://user-images.githubusercontent.com/15658403/169669675-a207218d-219d-4afd-a70b-3ff43a84965e.png)
-![nvim](https://user-images.githubusercontent.com/15658403/169669677-01e637d0-58b2-4460-a842-0ae72f1732da.png)
-
+![desktop](https://user-images.githubusercontent.com/15658403/184225285-cebcbfde-e5f2-427d-a71a-8a817a4b2c2e.png)
 
 ## How to run
 
