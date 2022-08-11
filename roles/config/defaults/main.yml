@@ -7,7 +7,6 @@ config_packages:
   - kitty
   - nvim
   - pgcli
-  - qtile
   - starship
   - tmux
   - rofi
