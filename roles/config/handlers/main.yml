@@ -24,3 +24,7 @@
   become: true
   command: virsh net-autostart default
   listen: "reboot done"
+
+- name: Build bat cache
+  command: bat cache --build
+  listen: "reboot done"

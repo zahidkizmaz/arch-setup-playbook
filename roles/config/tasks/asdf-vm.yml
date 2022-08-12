@@ -10,6 +10,7 @@
   vars:
     zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"
   loop: "{{ vm_asdf_plugins }}"
+  ignore_errors: true
 
 - name: Install npm packages
   shell:
