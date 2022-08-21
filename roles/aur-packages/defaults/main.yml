@@ -4,6 +4,7 @@ aur_packages:
   - asdf-vm
   - auto-cpufreq
   - apple_cursor
+  - shellcheck-bin
   - pulseaudio-control
   - nerd-fonts-noto
   - noto-fonts-emoji-blob

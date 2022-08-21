@@ -27,7 +27,6 @@ pacman_packages:
   - curl
   - wget
   - stylua
-  - shellcheck
   - zip
   - unzip
   - docker
