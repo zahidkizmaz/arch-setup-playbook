@@ -9,6 +9,8 @@
 
 - name: Update pipx packages
   command: pipx upgrade-all
+  register: upgraded_pipx_packages
+  changed_when: "'Versions did not change' not in upgraded_pipx_packages.stdout"
 
 - name: Update tmux packages
   command: ~/.tmux/plugins/tpm/bin/update_plugins all
