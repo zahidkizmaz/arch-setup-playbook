@@ -47,6 +47,12 @@
     apply:
       tags: asdf-vm
 
+- name: Install rust programming language
+  include_tasks:
+    file: rust.yml
+    apply:
+      tags: rust
+
 - name: Setup neovim
   include_tasks:
     file: neovim.yml
