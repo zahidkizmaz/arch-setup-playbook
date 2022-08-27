@@ -1,3 +1,13 @@
 ---
 - name: Install rust with rustup
   shell: "curl https://sh.rustup.rs -sSf | sh -s -- -y"
+
+- name: Delete {{ ansible_user }}'s .bashrc
+  file:
+    path: ~/.bashrc
+    state: absent
+
+- name: Delete {{ ansible_user }}'s .profile
+  file:
+    path: ~/.profile
+    state: absent
