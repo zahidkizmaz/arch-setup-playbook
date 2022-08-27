@@ -35,6 +35,7 @@ pipx_packages:
   - djhtml
   - flake8
   - tldr
+  - sqlfluff
   - lookatme
   - "python-lsp-server[all]"
 
