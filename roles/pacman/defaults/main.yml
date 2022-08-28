@@ -83,6 +83,7 @@ pacman_packages:
   - blueman
   - sxiv
   - gimp
+  - galculator
   - virt-manager
   - qemu-desktop
   - libvirt
