@@ -21,14 +21,13 @@ pacman_packages:
   - shfmt
   - tmux
   - direnv
-  - difftastic
   - btop
   - ctags
   - postgresql
   - curl
   - wget
   - stylua
-  - shellcheck
+  - luarocks
   - zip
   - unzip
   - docker
@@ -38,10 +37,12 @@ pacman_packages:
   ######## ARCH TOOLS ########
   ############################
   - base-devel
-  - qtile
+  - polkit
+  - polkit-gnome
   - polybar
   - sxhkd
   - bspwm
+  - reflector
   - brightnessctl
   - alsa-utils
   - pulseaudio
@@ -82,11 +83,14 @@ pacman_packages:
   - blueman
   - sxiv
   - gimp
+  - galculator
   - virt-manager
   - qemu-desktop
   - libvirt
   - edk2-ovmf
   - dnsmasq
   - flameshot
+  - arc-gtk-theme
   - papirus-icon-theme
   - libreoffice-still
+  - lxappearance

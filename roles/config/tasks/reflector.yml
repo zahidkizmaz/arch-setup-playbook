@@ -1,0 +1,6 @@
+---
+- name: Copy reflector config
+  become: true
+  template:
+    src: reflector.conf.j2
+    dest: "/etc/xdg/reflector/reflector.conf"

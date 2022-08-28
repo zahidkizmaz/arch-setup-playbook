@@ -7,19 +7,20 @@ config_packages:
   - kitty
   - nvim
   - pgcli
-  - qtile
   - starship
   - tmux
   - rofi
   - xorg
   - zsh
   - fzf
+  - bat
   - btop
   - dunst
   - bspwm
   - sxhkd
   - polybar
   - autorandr
+  - gtk-3.0
 
 pipx_packages:
   - ansible-base
@@ -34,6 +35,7 @@ pipx_packages:
   - djhtml
   - flake8
   - tldr
+  - sqlfluff
   - lookatme
   - "python-lsp-server[all]"
 

@@ -5,3 +5,10 @@
     name: "ly.service"
     enabled: true
   listen: "AUR packages installed"
+
+- name: Enable auto-cpufreq service
+  become: true
+  service:
+    name: "auto-cpufreq.service"
+    enabled: true
+  listen: "AUR packages installed"

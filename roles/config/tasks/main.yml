@@ -11,6 +11,12 @@
     apply:
       tags: libvirt
 
+- name: Copy reflector config
+  include_tasks:
+    file: reflector.yml
+    apply:
+      tags: reflector
+
 - name: Create dotfiles
   include_tasks:
     file: dotfiles.yml
@@ -40,6 +46,12 @@
     file: asdf-vm.yml
     apply:
       tags: asdf-vm
+
+- name: Install rust programming language
+  include_tasks:
+    file: rust.yml
+    apply:
+      tags: rust
 
 - name: Setup neovim
   include_tasks:

@@ -1,3 +1,5 @@
 ---
 - name: Update flatpak packages
   command: flatpak update --noninteractive
+  register: updated_flatpak_packages
+  changed_when: "'Nothing to do.' not in updated_flatpak_packages.stdout"
