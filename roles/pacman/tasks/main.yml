@@ -12,3 +12,7 @@
     name: "{{ pacman_packages }}"
     state: present
   notify: "pacman packages installed"
+  register: result
+  until: "result is not failed"
+  delay: 5
+  retries: 3
