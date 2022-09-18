@@ -5,6 +5,10 @@
     state: present
   become: true
   become_user: "{{ ansible_user }}"
+  register: result
+  until: "result is not failed"
+  delay: 5
+  retries: 3
 
 - name: Update cache
   kewlfft.aur.aur:
@@ -21,3 +25,7 @@
   become_user: "{{ ansible_user }}"
   loop: "{{ aur_packages }}"
   notify: "AUR packages installed"
+  register: result
+  until: "result is not failed"
+  delay: 5
+  retries: 3
