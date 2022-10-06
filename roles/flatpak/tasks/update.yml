@@ -3,3 +3,9 @@
   command: flatpak update --noninteractive
   register: updated_flatpak_packages
   changed_when: "'Nothing to do.' not in updated_flatpak_packages.stdout"
+
+- name: Remove unused flatpak packages
+  command: flatpak uninstall --unused -y
+  register: removed_flatpak_packages
+  changed_when: "'Nothing unused to uninstall' not in
+    removed_flatpak_packages.stdout"
