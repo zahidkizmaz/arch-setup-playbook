@@ -16,3 +16,15 @@
   until: "result is not failed"
   delay: 5
   retries: 3
+
+- name: Create pacman hooks folder
+  become: true
+  file:
+    path: /etc/pacman.d/hooks/
+    state: directory
+
+- name: Create auto link dash to /bin/sh hook
+  become: true
+  template:
+    src: relink-dash.hook.j2
+    dest: "/etc/pacman.d/hooks/relink-dash.hook"

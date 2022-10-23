@@ -5,6 +5,7 @@ pacman_packages:
   ############################
   - git
   - man-db
+  - dash
   - zsh
   - stow
   - starship
