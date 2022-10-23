@@ -20,3 +20,8 @@
     - name: Update configured packages
       include_tasks:
         file: roles/config/tasks/update.yml
+
+    - name: Update rust
+      command: rustup update
+      register: rustup_result
+      changed_when: "'updated' in rustup_result.stdout"

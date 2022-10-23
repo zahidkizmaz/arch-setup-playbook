@@ -33,6 +33,7 @@ pacman_packages:
   - docker
   - docker-compose
   - viu
+  - zoxide
   ############################
   ######## ARCH TOOLS ########
   ############################
