@@ -75,7 +75,6 @@ pacman_packages:
   ### DESKTOP APPLICATIONS ###
   ############################
   - arandr
-  - mpv
   - signal-desktop
   - firefox
   - kitty
