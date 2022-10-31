@@ -5,5 +5,5 @@ flatpak_packages:
   - com.spotify.Client
   - org.telegram.desktop
   - net.cozic.joplin_desktop
+  - com.github.tchx84.Flatseal
   - io.gitlab.librewolf-community
-  - flathub com.github.tchx84.Flatseal

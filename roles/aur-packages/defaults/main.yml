@@ -1,6 +1,6 @@
 ---
 aur_packages:
-  - ly
+  - ly-git
   - asdf-vm
   - auto-cpufreq
   - apple_cursor
