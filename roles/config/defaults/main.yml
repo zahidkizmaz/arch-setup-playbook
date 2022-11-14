@@ -21,6 +21,7 @@ config_packages:
   - polybar
   - autorandr
   - gtk-3.0
+  - libinput-gestures
 
 pipx_packages:
   - ansible-base
