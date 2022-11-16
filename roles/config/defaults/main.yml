@@ -1,6 +1,7 @@
 ---
 config_packages:
   - alacritty
+  - albert
   - ctags
   - direnv
   - git
