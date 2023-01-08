@@ -1,6 +1,7 @@
 ---
 config_packages:
   - alacritty
+  - albert
   - ctags
   - direnv
   - git
@@ -21,6 +22,7 @@ config_packages:
   - polybar
   - autorandr
   - gtk-3.0
+  - libinput-gestures
 
 pipx_packages:
   - ansible-base
@@ -46,7 +48,6 @@ vm_asdf_plugins:
 
 npm_packages:
   - neovim
-  - eslint_d
   - "@fsouza/prettierd"
 
 zsh_plugins:

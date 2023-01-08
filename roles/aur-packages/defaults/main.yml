@@ -1,10 +1,11 @@
 ---
 aur_packages:
-  - ly
+  - ly-git
   - asdf-vm
   - auto-cpufreq
   - apple_cursor
   - shellcheck-bin
+  - libinput-gestures
   - pulseaudio-control
   - nerd-fonts-noto
   - noto-fonts-emoji-blob
