@@ -30,9 +30,8 @@
       source {{ zshrc_location }} &&
       nvim --headless
       -c 'TSUpdateSync all'
-      -c 'autocmd User PackerComplete quitall'
-      -c 'PackerSync'
-      {{ zshrc_location }}
+      -c 'Lazy! sync'
+      +qa
     executable: /bin/zsh
   vars:
     zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"

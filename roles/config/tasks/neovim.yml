@@ -3,20 +3,7 @@
   shell:
     cmd: >
       source {{ zshrc_location }} &&
-      nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
-    executable: /bin/zsh
-  vars:
-    zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"
-
-- name: Install nvim treesitter grammars
-  shell:
-    cmd: >
-      source {{ zshrc_location }} &&
-      nvim --headless
-      -c 'TSInstallSync all'
-      -c 'autocmd User PackerComplete quitall'
-      -c 'PackerSync'
-      {{ zshrc_location }}
+      nvim --headless "+Lazy! sync" +qa
     executable: /bin/zsh
   vars:
     zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"
