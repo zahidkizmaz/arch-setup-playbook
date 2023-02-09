@@ -35,6 +35,7 @@ pacman_packages:
   - docker-compose
   - viu
   - zoxide
+  - lazygit
   ############################
   ######## ARCH TOOLS ########
   ############################
