@@ -8,6 +8,4 @@ aur_packages:
   - shellcheck-bin
   - libinput-gestures
   - pulseaudio-control
-  - nerd-fonts-noto
-  - noto-fonts-emoji-blob
-  - nerd-fonts-jetbrains-mono
+  # - nerd-fonts-git  # Commented out due to slow download and install

@@ -47,6 +47,7 @@ vm_asdf_plugins:
 
 npm_packages:
   - neovim
+  - eslint
   - "@fsouza/prettierd"
 
 zsh_plugins:
