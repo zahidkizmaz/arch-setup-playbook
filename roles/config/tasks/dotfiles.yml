@@ -3,6 +3,7 @@
   git:
     repo: "https://github.com/zahidkizmaz/dotfiles"
     dest: "~/Projects/dotfiles/"
+    force: true
     clone: true
 
 - name: Create .config folder

@@ -1,7 +1,6 @@
 ---
 config_packages:
   - alacritty
-  - albert
   - ctags
   - direnv
   - git
@@ -35,10 +34,10 @@ pipx_packages:
   - pre-commit
   - isort
   - djhtml
-  - flake8
   - tldr
   - sqlfluff
-  - lookatme
+  - ruff
+  - httpie
   - "python-lsp-server[all]"
 
 vm_asdf_plugins:
@@ -48,6 +47,7 @@ vm_asdf_plugins:
 
 npm_packages:
   - neovim
+  - eslint
   - "@fsouza/prettierd"
 
 zsh_plugins:
