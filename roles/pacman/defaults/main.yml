@@ -15,7 +15,6 @@ pacman_packages:
   - fzf
   - ripgrep
   - git-delta
-  - httpie
   - python-pipx
   - tree
   - jq
@@ -35,6 +34,7 @@ pacman_packages:
   - docker-compose
   - viu
   - zoxide
+  - lazygit
   ############################
   ######## ARCH TOOLS ########
   ############################

@@ -1,5 +1,6 @@
 ---
 aur_packages:
+  - albert
   - ly-git
   - asdf-vm
   - auto-cpufreq
@@ -7,6 +8,3 @@ aur_packages:
   - shellcheck-bin
   - libinput-gestures
   - pulseaudio-control
-  - nerd-fonts-noto
-  - noto-fonts-emoji-blob
-  - nerd-fonts-jetbrains-mono
