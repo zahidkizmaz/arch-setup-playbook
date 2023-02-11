@@ -71,8 +71,12 @@ pacman_packages:
   - xcb-util
   - xcb-util-wm
   - xcb-util-keysyms
-  - ttf-jetbrains-mono-nerd
+  ##############################
+  ### FONTS & ICONS & EMOJIS ###
+  ##############################
   - noto-fonts-emoji
+  - otf-cascadia-code-nerd
+  - ttf-jetbrains-mono-nerd
   ############################
   ### DESKTOP APPLICATIONS ###
   ############################
