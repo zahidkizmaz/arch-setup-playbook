@@ -71,6 +71,7 @@ pacman_packages:
   - xcb-util
   - xcb-util-wm
   - xcb-util-keysyms
+  - ttf-jetbrains-mono-nerd
   ############################
   ### DESKTOP APPLICATIONS ###
   ############################
