@@ -25,6 +25,7 @@ config_packages:
 
 pipx_packages:
   - ansible-base
+  - ansible-lint
   - pgcli
   - black
   - yamllint
