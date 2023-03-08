@@ -9,6 +9,7 @@ packages = [{include = "arch_setup_playbook"}]
 
 [tool.poetry.dependencies]
 python = "~3.11"
+ansible-core = "^2.14.3"
 
 
 [tool.poetry.group.dev.dependencies]

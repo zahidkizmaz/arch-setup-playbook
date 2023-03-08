@@ -4,7 +4,7 @@
 name = "ansible-core"
 version = "2.14.3"
 description = "Radically simple IT automation"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.9"
 files = [
@@ -132,7 +132,7 @@ files = [
 name = "cffi"
 version = "1.15.1"
 description = "Foreign Function Interface for Python calling C code."
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 files = [
@@ -233,7 +233,7 @@ files = [
 name = "cryptography"
 version = "39.0.2"
 description = "cryptography is a package which provides cryptographic recipes and primitives to Python developers."
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.6"
 files = [
@@ -322,7 +322,7 @@ license = ["ukkonen"]
 name = "jinja2"
 version = "3.1.2"
 description = "A very fast and expressive template engine."
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
@@ -385,7 +385,7 @@ testing = ["coverage", "pytest", "pytest-cov", "pytest-regressions"]
 name = "markupsafe"
 version = "2.1.2"
 description = "Safely add untrusted strings to HTML/XML markup."
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
@@ -484,7 +484,7 @@ setuptools = "*"
 name = "packaging"
 version = "23.0"
 description = "Core utilities for Python packages"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
@@ -543,7 +543,7 @@ virtualenv = ">=20.10.0"
 name = "pycparser"
 version = "2.21"
 description = "C parser in Python"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 files = [
@@ -607,7 +607,7 @@ files = [
 name = "pyyaml"
 version = "6.0"
 description = "YAML parser and emitter for Python"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.6"
 files = [
@@ -657,7 +657,7 @@ files = [
 name = "resolvelib"
 version = "0.8.1"
 description = "Resolve abstract dependencies into concrete ones"
-category = "dev"
+category = "main"
 optional = false
 python-versions = "*"
 files = [
@@ -794,4 +794,4 @@ setuptools = "*"
 [metadata]
 lock-version = "2.0"
 python-versions = "~3.11"
-content-hash = "60bcf496baf862f1251e71604b3e4d8d7fb11746562ddc1e6fc43e454ab6adb6"
+content-hash = "22ea4c326f4a3066f7c23ca3e0cd210886f40013c7ce402487dc971990b25dc0"
