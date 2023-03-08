@@ -3,7 +3,7 @@
   hosts: all
   pre_tasks:
     - name: Update pacman packages
-      include_tasks:
+      ansible.builtin.include_tasks:
         file: roles/pacman/tasks/update.yml
   roles:
     - role: setup-user
@@ -23,10 +23,10 @@
 
   tasks:
     - name: Flush handlers
-      meta: flush_handlers
+      ansible.builtin.meta: flush_handlers
 
     - name: Reboot the machine
       become: true
-      reboot:
+      ansible.builtin.reboot:
         reboot_timeout: 3000
       notify: "reboot done"
