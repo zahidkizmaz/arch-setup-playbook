@@ -11,6 +11,12 @@ repos:
       - id: check-added-large-files
   - repo: local
     hooks:
+      - id: ansible-lint
+        name: ansible-lint
+        entry: ansible-lint
+        args: ["--strict"]
+        language: system
+        files: \.(yml|yaml)$
       - id: check-yaml
         name: yamllint
         entry: yamllint
