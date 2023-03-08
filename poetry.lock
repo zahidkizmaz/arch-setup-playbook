@@ -794,4 +794,4 @@ setuptools = "*"
 [metadata]
 lock-version = "2.0"
 python-versions = "~3.11"
-content-hash = "22ea4c326f4a3066f7c23ca3e0cd210886f40013c7ce402487dc971990b25dc0"
+content-hash = "2381733a8616cfd70b9ed96cfc467ce1ea0b5c84b05855a15d0d1209e4aee3fc"
