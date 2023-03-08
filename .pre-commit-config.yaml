@@ -23,9 +23,3 @@ repos:
         args: ["--strict"]
         language: system
         files: \.(yml|yaml)$
-      - id: shfmt
-        name: shfmt
-        entry: shfmt
-        args: [-i=2, -ci, -bn]
-        language: system
-        files: '(.*\.sh$)|(.*rc$)'
