@@ -15,7 +15,8 @@
   changed_when: "'Versions did not change' not in upgraded_pipx_packages.stdout"
 
 - name: Update tmux packages
-  ansible.builtin.script: ~/.tmux/plugins/tpm/bin/update_plugins all
+  ansible.builtin.command: ~/.tmux/plugins/tpm/bin/update_plugins all
+  changed_when: true
 
 - name: Update asdf plugins
   ansible.builtin.shell:

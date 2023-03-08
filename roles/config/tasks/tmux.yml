@@ -9,4 +9,6 @@
     clone: true
 
 - name: Install tmux packages
-  ansible.builtin.script: ~/.tmux/plugins/tpm/bin/install_plugins
+  ansible.builtin.command: ~/.tmux/plugins/tpm/bin/install_plugins
+  register: install_tmux_packages
+  changed_when: "'Installing' in install_tmux_packages.stdout"

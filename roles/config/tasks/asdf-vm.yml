@@ -4,8 +4,12 @@
     cmd: >
       source {{ zshrc_location }} &&
       asdf plugin list
+    executable: /bin/zsh
   register: asdf_plugins
   changed_when: false
+  ignore_errors: true
+  vars:
+    zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"
 
 - name: Setup asdf-vm plugins
   ansible.builtin.shell:
@@ -15,7 +19,7 @@
       asdf install {{ item }} latest &&
       asdf global {{ item }} latest
     executable: /bin/zsh
-  when: "item|string not in asdf_plugins.stdout"
+  when: "item|string not in asdf_plugins.stdout_lines"
   changed_when: true
   vars:
     zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"

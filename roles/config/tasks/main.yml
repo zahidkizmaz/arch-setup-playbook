@@ -47,12 +47,6 @@
     apply:
       tags: asdf-vm
 
-- name: Install rust programming language
-  ansible.builtin.include_tasks:
-    file: rust.yml
-    apply:
-      tags: rust
-
 - name: Setup neovim
   ansible.builtin.include_tasks:
     file: neovim.yml
