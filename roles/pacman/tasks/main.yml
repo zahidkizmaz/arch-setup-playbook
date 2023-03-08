@@ -8,7 +8,7 @@
 
 - name: Install pacman packages
   become: true
-  pacman:
+  community.general.pacman:
     name: "{{ pacman_packages }}"
     state: present
   notify: "pacman packages installed"

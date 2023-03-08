@@ -1,7 +1,7 @@
 ---
 - name: Run the equivalent of "pacman -Syu"
   become: true
-  pacman:
+  community.general.pacman:
     upgrade: true
     update_cache: true
   register: update_result
@@ -23,7 +23,7 @@
 
 - name: "Clean packages: {{ packages_to_clean.stdout_lines | join(', ') }}"
   become: true
-  pacman:
+  community.general.pacman:
     name: "{{ packages_to_clean.stdout_lines }}"
     state: absent
     extra_args: --recursive
