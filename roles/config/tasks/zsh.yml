@@ -1,7 +1,9 @@
 ---
 - name: Install zsh plugins
-  git:
+  ansible.builtin.git:
     repo: "{{ item.repo }}"
     dest: "{{ item.dest }}"
+    version: master
+    force: true
     clone: true
   loop: "{{ zsh_plugins }}"

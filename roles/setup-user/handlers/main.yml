@@ -1,14 +1,14 @@
 ---
 - name: Set zsh as default user shell
   become: true
-  user:
+  ansible.builtin.user:
     name: "{{ ansible_user }}"
     shell: /usr/bin/zsh
   listen: "pacman packages installed"
 
-- name: Add user to {{ user_groups }} groups
+- name: Add user to {{ user_groups }}
   become: true
-  user:
+  ansible.builtin.user:
     name: "{{ ansible_user }}"
     groups: "{{ user_groups }}"
     append: true

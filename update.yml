@@ -5,25 +5,25 @@
     ansible_python_interpreter: /usr/bin/python3
   tasks:
     - name: Update pacman packages
-      include_tasks:
+      ansible.builtin.include_tasks:
         file: roles/pacman/tasks/update.yml
 
     - name: Update AUR packages
-      include_tasks:
+      ansible.builtin.include_tasks:
         file: roles/aur-packages/tasks/update.yml
 
     - name: Update flatpak packages
-      include_tasks:
+      ansible.builtin.include_tasks:
         file: roles/flatpak/tasks/update.yml
 
     - name: Include config vars
-      include_vars: roles/config/defaults/main.yml
+      ansible.builtin.include_vars: roles/config/defaults/main.yml
 
     - name: Update configured packages
-      include_tasks:
+      ansible.builtin.include_tasks:
         file: roles/config/tasks/update.yml
 
     - name: Update rust
-      command: rustup update
+      ansible.builtin.command: rustup update
       register: rustup_result
       changed_when: "'updated' in rustup_result.stdout"

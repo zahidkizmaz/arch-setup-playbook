@@ -16,9 +16,10 @@
 
 - name: Find packages to clean
   become: true
-  command: pacman -Qqdt
+  ansible.builtin.command: pacman -Qqdt
   register: packages_to_clean
   ignore_errors: true
+  changed_when: false
 
 - name: "Clean packages: {{ packages_to_clean.stdout_lines | join(', ') }}"
   become: true

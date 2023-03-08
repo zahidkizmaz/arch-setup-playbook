@@ -5,8 +5,8 @@
     state: present
   become: true
   become_user: "{{ ansible_user }}"
-  register: result
-  until: "result is not failed"
+  register: install_paru
+  until: "install_paru is not failed"
   delay: 5
   retries: 3
 
@@ -25,7 +25,7 @@
   become_user: "{{ ansible_user }}"
   loop: "{{ aur_packages }}"
   notify: "AUR packages installed"
-  register: result
-  until: "result is not failed"
+  register: install_aur_packages
+  until: "install_aur_packages is not failed"
   delay: 5
   retries: 3

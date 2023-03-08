@@ -1,30 +1,30 @@
 ---
 - name: Enable libvirtd.service
   become: true
-  service:
+  ansible.builtin.service:
     name: "libvirtd.service"
     enabled: true
   listen: "pacman packages installed"
 
 - name: Enable fstrim.timer
   become: true
-  service:
+  ansible.builtin.service:
     name: "fstrim.timer"
     enabled: true
   listen: "pacman packages installed"
 
 - name: Enable reflector.timer
   become: true
-  service:
+  ansible.builtin.service:
     name: "reflector.timer"
     enabled: true
   listen: "pacman packages installed"
 
 - name: Set virt network autostart for a VM
   become: true
-  command: virsh net-autostart default
+  ansible.builtin.command: virsh net-autostart default
   listen: "reboot done"
 
 - name: Build bat cache
-  command: bat cache --build
+  ansible.builtin.command: bat cache --build
   listen: "reboot done"

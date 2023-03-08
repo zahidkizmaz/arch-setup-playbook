@@ -1,31 +1,34 @@
 ---
 - name: Update zsh plugins
-  git:
+  ansible.builtin.git:
     repo: "{{ item.repo }}"
     dest: "{{ item.dest }}"
-    clone: false
+    version: master
     update: true
+    force: true
+    clone: true
   loop: "{{ zsh_plugins }}"
 
 - name: Update pipx packages
-  command: pipx upgrade-all
+  ansible.builtin.command: pipx upgrade-all
   register: upgraded_pipx_packages
   changed_when: "'Versions did not change' not in upgraded_pipx_packages.stdout"
 
 - name: Update tmux packages
-  command: ~/.tmux/plugins/tpm/bin/update_plugins all
+  ansible.builtin.script: ~/.tmux/plugins/tpm/bin/update_plugins all
 
 - name: Update asdf plugins
-  shell:
+  ansible.builtin.shell:
     cmd: >
       source {{ zshrc_location }} &&
       asdf plugin update --all
     executable: /bin/zsh
+  changed_when: false
   vars:
     zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"
 
 - name: Update nvim packages and treesitter grammars
-  shell:
+  ansible.builtin.shell:
     cmd: >
       source {{ zshrc_location }} &&
       nvim --headless
@@ -33,5 +36,8 @@
       -c 'Lazy! sync'
       +qa
     executable: /bin/zsh
+  register: nvim_install_result
+  changed_when: '"Updating" in nvim_install_result.stdout or \
+    "Downloading" in nvim_install_result.stdout'
   vars:
     zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"

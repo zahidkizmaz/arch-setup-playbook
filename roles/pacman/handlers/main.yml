@@ -1,14 +1,14 @@
 ---
 - name: Enable docker service
   become: true
-  service:
+  ansible.builtin.service:
     name: "docker.service"
     enabled: true
   listen: "pacman packages installed"
 
 - name: Enable cups service
   become: true
-  service:
+  ansible.builtin.service:
     name: "cups.service"
     enabled: true
   listen: "pacman packages installed"
