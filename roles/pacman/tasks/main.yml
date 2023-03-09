@@ -17,6 +17,11 @@
   delay: 5
   retries: 3
 
+- name: Install latest stable rust
+  ansible.builtin.command: rustup default stable
+  register: rust_install
+  changed_when: "'unchanged' not in rust_install.stdout"
+
 - name: Create pacman hooks folder
   become: true
   ansible.builtin.file:
