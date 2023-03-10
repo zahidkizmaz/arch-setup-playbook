@@ -1,10 +1,12 @@
 ---
-- name: Clean pipx packages
-  ansible.builtin.command: pipx uninstall-all
-  changed_when: true
+- name: Get installed pipx packages
+  ansible.builtin.command: pipx list
+  register: installed_pipx_packages
+  changed_when: false
 
 - name: Install pipx packages
   ansible.builtin.command: pipx install {{ item }}
+  when: "item|string not in installed_pipx_packages.stdout"
   loop: "{{ pipx_packages }}"
   changed_when: true
 
