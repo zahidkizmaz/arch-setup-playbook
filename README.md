@@ -73,7 +73,9 @@ ansible-playbook -K --inventory inventory.yml install.yml
 
 ### Update the system
 
-This updates all the packages installed by playbook. Such as:
+This updates all the packages installed by playbook.
+
+Such as:
 
 -   AUR packages
 -   pacman packages
