@@ -1,60 +1,54 @@
 ---
 - name: Creata system rules
-  include_tasks:
+  ansible.builtin.include_tasks:
     file: rules.yml
     apply:
       tags: rules
 
 - name: Setup libvirt and qemu
-  include_tasks:
+  ansible.builtin.include_tasks:
     file: libvirt.yml
     apply:
       tags: libvirt
 
 - name: Copy reflector config
-  include_tasks:
+  ansible.builtin.include_tasks:
     file: reflector.yml
     apply:
       tags: reflector
 
 - name: Create dotfiles
-  include_tasks:
+  ansible.builtin.include_tasks:
     file: dotfiles.yml
     apply:
       tags: dotfiles
 
 - name: Setup ZSH
-  include_tasks:
+  ansible.builtin.include_tasks:
     file: zsh.yml
     apply:
       tags: zsh
 
 - name: Install pipx packages
-  include_tasks:
+  ansible.builtin.include_tasks:
     file: pipx.yml
     apply:
       tags: pipx
 
 - name: Setup tmux
-  include_tasks:
+  ansible.builtin.include_tasks:
     file: tmux.yml
     apply:
       tags: tmux
 
 - name: Install asdf-vm managed runtimes and packages
-  include_tasks:
+  ansible.builtin.include_tasks:
     file: asdf-vm.yml
     apply:
       tags: asdf-vm
 
-- name: Install rust programming language
-  include_tasks:
-    file: rust.yml
-    apply:
-      tags: rust
-
 - name: Setup neovim
-  include_tasks:
+  ansible.builtin.include_tasks:
     file: neovim.yml
     apply:
       tags: neovim

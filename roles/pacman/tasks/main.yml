@@ -1,30 +1,37 @@
 ---
 - name: Enable pacman parallel downloading
   become: true
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /etc/pacman.conf
     regexp: "ParallelDownloads ="
     line: "ParallelDownloads = 10"
 
 - name: Install pacman packages
   become: true
-  pacman:
+  community.general.pacman:
     name: "{{ pacman_packages }}"
     state: present
   notify: "pacman packages installed"
-  register: result
-  until: "result is not failed"
+  register: install_pacman_packages_result
+  until: "install_pacman_packages_result is not failed"
   delay: 5
   retries: 3
 
+- name: Install latest stable rust
+  ansible.builtin.command: rustup default stable
+  register: rust_install
+  changed_when: "'unchanged' not in rust_install.stdout"
+
 - name: Create pacman hooks folder
   become: true
-  file:
+  ansible.builtin.file:
     path: /etc/pacman.d/hooks/
+    mode: "u=rwx,g=rx,o=rx"
     state: directory
 
 - name: Create auto link dash to /bin/sh hook
   become: true
-  template:
+  ansible.builtin.template:
     src: relink-dash.hook.j2
+    mode: "u=rw,g=r,o=r"
     dest: "/etc/pacman.d/hooks/relink-dash.hook"

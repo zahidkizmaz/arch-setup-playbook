@@ -1,9 +1,14 @@
 ---
 - name: Install tmux package manager TPM
-  git:
+  ansible.builtin.git:
     repo: https://github.com/tmux-plugins/tpm
     dest: ~/.tmux/plugins/tpm
+    version: master
+    update: true
+    force: true
     clone: true
 
 - name: Install tmux packages
-  command: ~/.tmux/plugins/tpm/bin/install_plugins
+  ansible.builtin.command: ~/.tmux/plugins/tpm/bin/install_plugins
+  register: install_tmux_packages
+  changed_when: "'Installing' in install_tmux_packages.stdout"

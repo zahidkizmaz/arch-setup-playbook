@@ -1,9 +1,10 @@
 ---
 - name: Install nvim packages
-  shell:
+  ansible.builtin.shell:
     cmd: >
       source {{ zshrc_location }} &&
       nvim --headless "+Lazy! sync" +qa
     executable: /bin/zsh
   vars:
     zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"
+  changed_when: true

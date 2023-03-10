@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "arch-setup-playbook"
+version = "0.1.0"
+description = "Personal arch linux setup&configuration ansible playbook."
+authors = ["Zahid Kizmaz <tech@zahid.rocks>"]
+license = "GPLv3"
+readme = "README.md"
+packages = [{include = "arch_setup_playbook"}]
+
+[tool.poetry.dependencies]
+python = "~3.11"
+ansible-core = "*"
+
+
+[tool.poetry.group.dev.dependencies]
+yamllint = "*"
+pre-commit = "*"
+ansible-lint = {markers = "platform_system != \"Windows\"", version = "*"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

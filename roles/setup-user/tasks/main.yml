@@ -1,5 +1,5 @@
 ---
-- name: Allow {{ ansible_user }} to run `sudo pacman` without a password
+- name: Allow to run `sudo pacman` without a password for {{ ansible_user }}
   community.general.sudoers:
     name: "run-pacman-no-password"
     user: "{{ ansible_user }}"
@@ -7,7 +7,7 @@
     nopassword: true
   become: true
 
-- name: Delete {{ ansible_user }}'s .bash_profile
-  file:
+- name: Delete .bash_profile of {{ ansible_user }}
+  ansible.builtin.file:
     path: ~/.bash_profile
     state: absent

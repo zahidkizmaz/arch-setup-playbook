@@ -1,23 +1,29 @@
 ---
 - name: Get dotfiles from GitHub
-  git:
+  ansible.builtin.git:
     repo: "https://github.com/zahidkizmaz/dotfiles"
     dest: "~/Projects/dotfiles/"
+    version: main
+    update: true
     force: true
     clone: true
 
 - name: Create .config folder
-  file:
+  ansible.builtin.file:
     path: ~/.config/
     state: directory
+    mode: "u=rwx,g=rx,o=rx"
 
 - name: Create autorandr config folder
-  file:
+  ansible.builtin.file:
     path: ~/.config/autorandr/
     state: directory
+    mode: "u=rwx,g=rx,o=rx"
 
 - name: Create symlinks to config files
-  command: stow --adopt -RSt ~ {{ item }}
+  ansible.builtin.command: stow --adopt -RSt ~ {{ item }}
+  register: stow_result
   args:
     chdir: ~/Projects/dotfiles/
   loop: "{{ config_packages }}"
+  changed_when: "'LINK' in stow_result.stdout"

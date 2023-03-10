@@ -35,6 +35,7 @@ pacman_packages:
   - viu
   - zoxide
   - lazygit
+  - rustup
   ############################
   ######## ARCH TOOLS ########
   ############################

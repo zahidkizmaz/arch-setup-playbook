@@ -1,10 +1,15 @@
 ---
-- name: Clean pipx packages
-  command: pipx uninstall-all
+- name: Get installed pipx packages
+  ansible.builtin.command: pipx list
+  register: installed_pipx_packages
+  changed_when: false
 
 - name: Install pipx packages
-  command: pipx install {{ item }}
+  ansible.builtin.command: pipx install {{ item }}
+  when: "item|string not in installed_pipx_packages.stdout"
   loop: "{{ pipx_packages }}"
+  changed_when: true
 
 - name: Inject neovim and pylsp-mypy package to python-lsp-server env
-  command: pipx inject python-lsp-server neovim pylsp-mypy
+  ansible.builtin.command: pipx inject python-lsp-server neovim pylsp-mypy
+  changed_when: true
