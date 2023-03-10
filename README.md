@@ -84,6 +84,7 @@ Such as:
 -   flatpak packages
 -   asdf plugins
 -   tmux plugins
+-   npm global plugins
 -   rust programming language
 -   nvim packages and tree sitter grammars
 

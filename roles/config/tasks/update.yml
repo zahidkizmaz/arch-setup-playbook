@@ -28,6 +28,14 @@
   vars:
     zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"
 
+- name: Update npm global packages
+  ansible.builtin.command: npm update -g
+  register: updated_npm_packages
+  changed_when: |
+    'added' in updated_npm_packages.stdout
+    or 'removed' in updated_npm_packages.stdout
+    or 'changed' in updated_npm_packages.stdout
+
 - name: Update nvim packages and treesitter grammars
   ansible.builtin.shell:
     cmd: >
