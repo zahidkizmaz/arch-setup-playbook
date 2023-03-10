@@ -5,7 +5,6 @@ description = "Personal arch linux setup&configuration ansible playbook."
 authors = ["Zahid Kizmaz <tech@zahid.rocks>"]
 license = "GPLv3"
 readme = "README.md"
-packages = [{include = "arch_setup_playbook"}]
 
 [tool.poetry.dependencies]
 python = "~3.11"
