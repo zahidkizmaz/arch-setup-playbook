@@ -38,7 +38,8 @@
       +qa
     executable: /bin/zsh
   register: nvim_install_result
-  changed_when: '"Updating" in nvim_install_result.stdout or \
-    "Downloading" in nvim_install_result.stdout'
+  changed_when: |
+    "Updating" in nvim_install_result.stdout
+    or "Downloading" in nvim_install_result.stdout
   vars:
     zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"
