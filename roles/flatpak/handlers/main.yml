@@ -1,0 +1,5 @@
+---
+- name: Updated flatpak packages
+  ansible.builtin.debug:
+    var: updated_flatpak_packages
+  when: updated_flatpak_packages.changed

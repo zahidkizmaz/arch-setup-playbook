@@ -12,3 +12,8 @@
     name: "cups.service"
     enabled: true
   listen: "pacman packages installed"
+
+- name: Updated pacman packages
+  ansible.builtin.debug:
+    var: updated_pacman_packages.packages
+  when: updated_pacman_packages.changed

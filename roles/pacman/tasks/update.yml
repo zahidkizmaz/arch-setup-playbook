@@ -4,15 +4,10 @@
   community.general.pacman:
     upgrade: true
     update_cache: true
-  register: update_result
-  until: "update_result is not failed"
+  register: updated_pacman_packages
+  until: "updated_pacman_packages is not failed"
   delay: 5
   retries: 3
-
-- name: Show updated packages
-  ansible.builtin.debug:
-    var: update_result.packages
-  when: (update_result.packages | default(false))
 
 - name: Find packages to clean
   become: true
