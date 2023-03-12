@@ -8,6 +8,7 @@
   until: "updated_pacman_packages is not failed"
   delay: 5
   retries: 3
+  notify: "pacman_update"
 
 - name: Find packages to clean
   become: true

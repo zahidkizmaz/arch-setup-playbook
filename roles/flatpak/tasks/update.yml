@@ -3,6 +3,7 @@
   ansible.builtin.command: flatpak update --noninteractive
   register: updated_flatpak_packages
   changed_when: "'Nothing to do.' not in updated_flatpak_packages.stdout"
+  notify: "flatpak_update"
 
 - name: Remove unused flatpak packages
   ansible.builtin.command: flatpak uninstall --unused -y

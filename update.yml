@@ -27,3 +27,22 @@
       ansible.builtin.command: rustup update
       register: rustup_result
       changed_when: "'updated' in rustup_result.stdout"
+
+  handlers:
+    - name: Updated pacman packages
+      ansible.builtin.debug:
+        var: updated_pacman_packages.packages
+      when: (updated_pacman_packages.packages | default(false))
+      listen: "pacman_update"
+
+    - name: Updated flatpak packages
+      ansible.builtin.debug:
+        var: updated_flatpak_packages
+      when: updated_flatpak_packages.changed
+      listen: "flatpak_update"
+
+    - name: Updated AUR packages
+      ansible.builtin.debug:
+        var: updated_aur_packages
+      when: updated_aur_packages.changed
+      listen: "aur_update"

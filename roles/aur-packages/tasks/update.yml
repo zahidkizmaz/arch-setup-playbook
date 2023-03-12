@@ -6,3 +6,4 @@
     aur_only: true
     update_cache: true
   register: updated_aur_packages
+  notify: "aur_update"

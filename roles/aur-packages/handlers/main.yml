@@ -12,8 +12,3 @@
     name: "auto-cpufreq.service"
     enabled: true
   listen: "AUR packages installed"
-
-- name: Updated AUR packages
-  ansible.builtin.debug:
-    var: updated_aur_packages
-  when: updated_aur_packages.changed
