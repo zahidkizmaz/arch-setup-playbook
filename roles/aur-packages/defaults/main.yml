@@ -2,7 +2,7 @@
 aur_packages:
   - albert
   - ly-git
-  - asdf-vm
+  - rtx-bin
   - auto-cpufreq
   - apple_cursor
   - shellcheck-bin
