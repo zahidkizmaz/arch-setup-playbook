@@ -41,11 +41,11 @@
     apply:
       tags: tmux
 
-- name: Install asdf-vm managed runtimes and packages
+- name: Install rtx managed runtimes and packages
   ansible.builtin.include_tasks:
-    file: asdf-vm.yml
+    file: rtx.yml
     apply:
-      tags: asdf-vm
+      tags: rtx
 
 - name: Setup neovim
   ansible.builtin.include_tasks:
