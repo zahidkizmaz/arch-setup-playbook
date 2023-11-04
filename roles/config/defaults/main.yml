@@ -2,7 +2,6 @@
 config_packages:
   - alacritty
   - ctags
-  - direnv
   - git
   - kitty
   - nvim

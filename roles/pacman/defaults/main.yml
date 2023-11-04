@@ -48,9 +48,6 @@ pacman_packages:
   - reflector
   - brightnessctl
   - alsa-utils
-  - pulseaudio
-  - pulseaudio-alsa
-  - pulseaudio-bluetooth
   - pavucontrol
   - picom
   - nitrogen
@@ -76,7 +73,6 @@ pacman_packages:
   ### FONTS & ICONS & EMOJIS ###
   ##############################
   - noto-fonts-emoji
-  - otf-cascadia-code-nerd
   - ttf-jetbrains-mono-nerd
   ############################
   ### DESKTOP APPLICATIONS ###
