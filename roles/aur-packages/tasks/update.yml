@@ -1,6 +1,8 @@
 ---
 - name: Update AUR packages
   kewlfft.aur.aur:
-    aur_only: true
     upgrade: true
+    state: latest
+    aur_only: true
     update_cache: true
+  register: updated_aur_packages
