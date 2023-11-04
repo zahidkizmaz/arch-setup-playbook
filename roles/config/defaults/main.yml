@@ -39,7 +39,7 @@ pipx_packages:
   - neovim-remote
   - "python-lsp-server[all]"
 
-vm_asdf_plugins:
+rtx_plugins:
   - python
   - nodejs
   - golang

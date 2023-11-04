@@ -82,7 +82,7 @@ Such as:
 -   zsh plugins
 -   pipx packages
 -   flatpak packages
--   asdf plugins
+-   rtx plugins
 -   tmux plugins
 -   npm global plugins
 -   rust programming language

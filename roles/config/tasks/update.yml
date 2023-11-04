@@ -14,19 +14,25 @@
   register: upgraded_pipx_packages
   changed_when: "'Versions did not change' not in upgraded_pipx_packages.stdout"
 
+- name: Update tldr cache
+  ansible.builtin.command: tldr -u
+  changed_when: true
+
+- name: Update bat cache
+  ansible.builtin.command: bat cache --build
+  changed_when: true
+
 - name: Update tmux packages
   ansible.builtin.command: ~/.tmux/plugins/tpm/bin/update_plugins all
   changed_when: true
 
-- name: Update asdf plugins
+- name: Update rtx plugins
   ansible.builtin.shell:
     cmd: >
-      source {{ zshrc_location }} &&
-      asdf plugin update --all
+      rtx activate &&
+      rtx plugins update
     executable: /bin/zsh
   changed_when: false
-  vars:
-    zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"
 
 - name: Update npm global packages
   ansible.builtin.command: npm update -g

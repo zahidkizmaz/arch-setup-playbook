@@ -2,7 +2,7 @@
 aur_packages:
   - albert
   - ly-git
-  - asdf-vm
+  - rtx-bin
   - apple_cursor
   - shellcheck-bin
   - libinput-gestures
