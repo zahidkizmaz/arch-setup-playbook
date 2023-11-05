@@ -24,7 +24,7 @@ config_packages:
   - gtk-3.0
   - libinput-gestures
 
-pipx_packages:
+config_pipx_packages:
   - ansible-base
   - ansible-lint
   - pgcli
@@ -41,17 +41,17 @@ pipx_packages:
   - neovim-remote
   - "python-lsp-server[all]"
 
-rtx_plugins:
+config_rtx_plugins:
   - golang
   - node@lts
   - python
 
-npm_packages:
+config_npm_packages:
   - neovim
   - eslint
   - "@fsouza/prettierd"
 
-zsh_plugins:
+config_zsh_plugins:
   - repo: https://github.com/zsh-users/zsh-autosuggestions
     dest: "~/.config/zsh/plugins/zsh-autosuggestions"
   - repo: https://github.com/zsh-users/zsh-syntax-highlighting

@@ -6,12 +6,12 @@
       rtx install {{ item }}
     executable: /bin/zsh
   changed_when: true
-  loop: "{{ rtx_plugins }}"
+  loop: "{{ config_rtx_plugins }}"
 
 - name: Install npm packages
   ansible.builtin.shell:
     cmd: >
       rtx exec node@lts -- npm install -g {{ item }}
-  loop: "{{ npm_packages }}"
+  loop: "{{ config_npm_packages }}"
   register: npm_install_result
   changed_when: '"changed" in npm_install_result.stdout'
