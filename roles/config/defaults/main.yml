@@ -3,6 +3,7 @@ config_packages:
   - alacritty
   - ctags
   - git
+  - rtx
   - kitty
   - wezterm
   - nvim
