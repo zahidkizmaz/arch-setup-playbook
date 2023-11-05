@@ -6,16 +6,12 @@
       rtx install {{ item }}
     executable: /bin/zsh
   changed_when: true
-  loop: "{{ rtx_plugins }}"
+  loop: "{{ config_rtx_plugins }}"
 
 - name: Install npm packages
   ansible.builtin.shell:
     cmd: >
-      source {{ zshrc_location }} &&
-      npm install -g {{ item }}
-    executable: /bin/zsh
-  loop: "{{ npm_packages }}"
+      rtx exec node@lts -- npm install -g {{ item }}
+  loop: "{{ config_npm_packages }}"
   register: npm_install_result
   changed_when: '"changed" in npm_install_result.stdout'
-  vars:
-    zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"

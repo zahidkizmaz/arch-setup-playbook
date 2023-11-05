@@ -7,7 +7,7 @@
     update: true
     force: true
     clone: true
-  loop: "{{ zsh_plugins }}"
+  loop: "{{ config_zsh_plugins }}"
 
 - name: Update pipx packages
   ansible.builtin.command: pipx upgrade-all

@@ -3,7 +3,6 @@ aur_packages:
   - albert
   - ly-git
   - rtx-bin
-  - auto-cpufreq
   - apple_cursor
   - shellcheck-bin
   - libinput-gestures

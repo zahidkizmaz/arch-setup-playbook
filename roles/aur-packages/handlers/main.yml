@@ -5,10 +5,3 @@
     name: "ly.service"
     enabled: true
   listen: "AUR packages installed"
-
-- name: Enable auto-cpufreq service
-  become: true
-  ansible.builtin.service:
-    name: "auto-cpufreq.service"
-    enabled: true
-  listen: "AUR packages installed"

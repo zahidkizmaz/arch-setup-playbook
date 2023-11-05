@@ -6,4 +6,4 @@
     version: master
     force: true
     clone: true
-  loop: "{{ zsh_plugins }}"
+  loop: "{{ config_zsh_plugins }}"

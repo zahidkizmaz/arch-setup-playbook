@@ -47,6 +47,12 @@
     apply:
       tags: rtx
 
+- name: Install auto-cpufreq
+  ansible.builtin.include_tasks:
+    file: auto-cpufreq.yml
+    apply:
+      tags: auto-cpufreq
+
 - name: Setup neovim
   ansible.builtin.include_tasks:
     file: neovim.yml
