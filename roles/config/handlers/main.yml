@@ -4,7 +4,6 @@
   ansible.builtin.service:
     name: "libvirtd.service"
     enabled: true
-    state: restarted
   listen: "pacman packages installed"
 
 - name: Enable fstrim.timer
