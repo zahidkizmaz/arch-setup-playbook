@@ -11,11 +11,7 @@
 - name: Install npm packages
   ansible.builtin.shell:
     cmd: >
-      source {{ zshrc_location }} &&
-      npm install -g {{ item }}
-    executable: /bin/zsh
+      rtx exec node@lts -- npm install -g {{ item }}
   loop: "{{ npm_packages }}"
   register: npm_install_result
   changed_when: '"changed" in npm_install_result.stdout'
-  vars:
-    zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"

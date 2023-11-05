@@ -40,9 +40,9 @@ pipx_packages:
   - "python-lsp-server[all]"
 
 rtx_plugins:
-  - python
-  - nodejs
   - golang
+  - node@lts
+  - python
 
 npm_packages:
   - neovim
