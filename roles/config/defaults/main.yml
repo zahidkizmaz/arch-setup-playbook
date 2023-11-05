@@ -4,6 +4,7 @@ config_packages:
   - ctags
   - git
   - kitty
+  - wezterm
   - nvim
   - pgcli
   - starship
