@@ -9,13 +9,15 @@
     clone: true
 
 - name: Build auto-cpufreq
-  ansible.builtin.command: auto-cpufreq-installer
+  ansible.builtin.command:
   become: true
   args:
-    chdir: ~/Programs/auto-cpufreq/auto-cpufreq-installer
+    cmd: ./auto-cpufreq-installer --install
+    chdir: "/home/{{ ansible_user }}/Programs/auto-cpufreq"
   changed_when: true
 
 - name: Setup auto-cpufreq
   ansible.builtin.command: auto-cpufreq --install
   become: true
   changed_when: true
+  ignore_errors: true
