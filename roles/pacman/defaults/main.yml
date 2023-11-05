@@ -74,6 +74,7 @@ pacman_packages:
   ##############################
   - noto-fonts-emoji
   - ttf-jetbrains-mono-nerd
+  - ttf-noto-nerd
   ############################
   ### DESKTOP APPLICATIONS ###
   ############################
