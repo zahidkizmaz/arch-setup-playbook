@@ -28,11 +28,19 @@
 
 - name: Update rtx plugins
   ansible.builtin.shell:
-    cmd: >
-      rtx activate &&
-      rtx plugins update
+    cmd: rtx plugins update
     executable: /bin/zsh
-  changed_when: false
+  register: updated_rtx_plugins
+  changed_when: |
+    updated_rtx_plugins.stdout != ""
+
+- name: Update rtx installations
+  ansible.builtin.shell:
+    cmd: rtx plugins update
+    executable: /bin/zsh
+  register: updated_rtx_installations
+  changed_when: |
+    "all runtimes are installed" in updated_rtx_installations.stdout
 
 - name: Update npm global packages
   ansible.builtin.command: npm update -g
