@@ -1,9 +1,7 @@
 ---
 aur_packages:
-  - albert
   - ly-git
   - rtx-bin
   - apple_cursor
   - shellcheck-bin
   - libinput-gestures
-  - pulseaudio-control
