@@ -42,6 +42,14 @@
   changed_when: |
     "all runtimes are installed" in updated_rtx_installations.stdout
 
+- name: Clean unused rtx installations
+  ansible.builtin.shell:
+    cmd: rtx prune --yes
+    executable: /bin/zsh
+  register: clean_rtx_installations
+  changed_when: |
+    "removing" in clean_rtx_installations.stdout
+
 - name: Update npm global packages
   ansible.builtin.command: npm update -g
   register: updated_npm_packages
