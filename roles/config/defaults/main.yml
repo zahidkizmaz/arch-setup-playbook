@@ -3,6 +3,7 @@ config_packages:
   - alacritty
   - ctags
   - git
+  - gitui
   - rtx
   - kitty
   - wezterm
