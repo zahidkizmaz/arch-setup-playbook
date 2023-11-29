@@ -75,6 +75,7 @@ pacman_packages:
   - noto-fonts-emoji
   - ttf-cascadia-code-nerd
   - ttf-jetbrains-mono-nerd
+  - ttf-iosevkaterm-nerd
   - ttf-noto-nerd
   ############################
   ### DESKTOP APPLICATIONS ###
