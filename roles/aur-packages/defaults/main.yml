@@ -1,7 +1,6 @@
 ---
 aur_packages:
-  - ly-git
-  - rtx-bin
+  - mise-bin
   - apple_cursor
   - shellcheck-bin
   - libinput-gestures
