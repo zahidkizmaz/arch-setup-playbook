@@ -26,29 +26,29 @@
   ansible.builtin.command: ~/.tmux/plugins/tpm/bin/update_plugins all
   changed_when: true
 
-- name: Update rtx plugins
+- name: Update mise plugins
   ansible.builtin.shell:
-    cmd: rtx plugins update
+    cmd: mise plugins update
     executable: /bin/zsh
-  register: updated_rtx_plugins
+  register: updated_mise_plugins
   changed_when: |
-    updated_rtx_plugins.stdout != ""
+    updated_mise_plugins.stdout != ""
 
-- name: Update rtx installations
+- name: Update mise installations
   ansible.builtin.shell:
-    cmd: rtx plugins update
+    cmd: mise plugins update
     executable: /bin/zsh
-  register: updated_rtx_installations
+  register: updated_mise_installations
   changed_when: |
-    "all runtimes are installed" in updated_rtx_installations.stdout
+    "all runtimes are installed" in updated_mise_installations.stdout
 
-- name: Clean unused rtx installations
+- name: Clean unused mise installations
   ansible.builtin.shell:
-    cmd: rtx prune --yes
+    cmd: mise prune --yes
     executable: /bin/zsh
-  register: clean_rtx_installations
+  register: clean_mise_installations
   changed_when: |
-    "removing" in clean_rtx_installations.stdout
+    "removing" in clean_mise_installations.stdout
 
 - name: Update npm global packages
   ansible.builtin.command: npm update -g

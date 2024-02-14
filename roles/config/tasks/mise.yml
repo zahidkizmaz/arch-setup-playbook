@@ -1,0 +1,13 @@
+---
+- name: Install mise plugins
+  ansible.builtin.command: >
+    mise install {{ item }}
+  changed_when: true
+  loop: "{{ config_mise_plugins }}"
+
+- name: Install npm packages
+  ansible.builtin.command: >
+    mise exec node@lts -- npm install -g {{ item }}
+  loop: "{{ config_npm_packages }}"
+  register: npm_install_result
+  changed_when: '"changed" in npm_install_result.stdout'

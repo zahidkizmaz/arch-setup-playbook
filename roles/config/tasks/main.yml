@@ -29,6 +29,12 @@
     apply:
       tags: zsh
 
+- name: Install mise managed runtimes and packages
+  ansible.builtin.include_tasks:
+    file: mise.yml
+    apply:
+      tags: mise
+
 - name: Install pipx packages
   ansible.builtin.include_tasks:
     file: pipx.yml
@@ -40,12 +46,6 @@
     file: tmux.yml
     apply:
       tags: tmux
-
-- name: Install rtx managed runtimes and packages
-  ansible.builtin.include_tasks:
-    file: rtx.yml
-    apply:
-      tags: rtx
 
 - name: Install auto-cpufreq
   ansible.builtin.include_tasks:
