@@ -82,7 +82,7 @@ Such as:
 -   zsh plugins
 -   pipx packages
 -   flatpak packages
--   rtx plugins
+-   mise plugins
 -   tmux plugins
 -   npm global plugins
 -   rust programming language
@@ -99,3 +99,14 @@ ansible-playbook -K --inventory inventory.yml update.yml
 ```shell
 ansible-playbook -K --connection local --inventory localhost, update.yml
 ```
+
+### Testing
+
+Installation playbook can be tested locally using docker.
+
+```shell
+docker build . -t dev_env
+docker run --it dev_env
+```
+
+This doesn't include __flatpak__ role due to limitations of docker.
