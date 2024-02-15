@@ -4,7 +4,7 @@ config_packages:
   - ctags
   - git
   - gitui
-  - rtx
+  - mise
   - kitty
   - wezterm
   - nvim
@@ -40,9 +40,9 @@ config_pipx_packages:
   - ruff
   - httpie
   - neovim-remote
-  - "python-lsp-server[all]"
+  - python-lsp-server
 
-config_rtx_plugins:
+config_mise_plugins:
   - golang
   - node@lts
   - python

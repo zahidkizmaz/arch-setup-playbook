@@ -3,6 +3,7 @@ pacman_packages:
   ############################
   ######## DEV TOOLS #########
   ############################
+  - atuin
   - git
   - man-db
   - dash
@@ -20,10 +21,8 @@ pacman_packages:
   - jq
   - shfmt
   - tmux
-  - direnv
   - btop
   - ctags
-  - postgresql
   - curl
   - wget
   - stylua
@@ -45,9 +44,11 @@ pacman_packages:
   - polybar
   - sxhkd
   - bspwm
+  - ly
   - reflector
   - brightnessctl
   - alsa-utils
+  - jack2
   - pavucontrol
   - picom
   - nitrogen
@@ -72,7 +73,7 @@ pacman_packages:
   ##############################
   ### FONTS & ICONS & EMOJIS ###
   ##############################
-  - noto-fonts-emoji
+  - noto-fonts
   - ttf-cascadia-code-nerd
   - ttf-jetbrains-mono-nerd
   - ttf-iosevkaterm-nerd
@@ -90,7 +91,6 @@ pacman_packages:
   - blueman
   - sxiv
   - dmenu
-  - gimp
   - galculator
   - virt-manager
   - qemu-desktop
@@ -100,5 +100,4 @@ pacman_packages:
   - flameshot
   - arc-gtk-theme
   - papirus-icon-theme
-  - libreoffice-still
   - lxappearance
