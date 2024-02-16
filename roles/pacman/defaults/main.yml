@@ -40,6 +40,7 @@ pacman_packages:
   # Window Manager
   - hyprland
   - wayland
+  - waybar
   - polkit-kde-agent
   - xdg-desktop-portal-hyprland
   - qt5-wayland
@@ -74,7 +75,7 @@ pacman_packages:
   ### FONTS & TEHEMES & EMOJIS ###
   ################################
   - arc-gtk-theme
-  - noto-fonts
+  - noto-fonts-emoji
   - papirus-icon-theme
   - ttf-cascadia-code-nerd
   - ttf-iosevkaterm-nerd
