@@ -1,6 +1,6 @@
 ---
 aur_packages:
+  - tofi
   - mise-bin
   - apple_cursor
   - shellcheck-bin
-  - libinput-gestures
