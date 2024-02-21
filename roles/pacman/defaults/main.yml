@@ -47,11 +47,12 @@ pacman_packages:
   - qt6-wayland
   # Hardware Controllers
   - pipewire
+  - pipewire-pulse
   - wireplumber  # pipewire session manager
-  - brightnessctl
   - pavucontrol
   - playerctl
   - bluez-utils
+  - brightnessctl
   # Applets
   - network-manager-applet
   - blueman
