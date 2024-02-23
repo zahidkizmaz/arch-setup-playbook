@@ -66,6 +66,9 @@ pacman_packages:
   # Screenshot
   - grim
   - slurp
+  # Lock screen
+  - swaylock
+  - swayidle
   ############################
   ######## ARCH TOOLS ########
   ############################
