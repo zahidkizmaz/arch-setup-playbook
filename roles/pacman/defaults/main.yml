@@ -63,7 +63,9 @@ pacman_packages:
   # Desktop Applications
   - firefox
   - pcmanfm
-  - flameshot
+  # Screenshot
+  - grim
+  - slurp
   ############################
   ######## ARCH TOOLS ########
   ############################
