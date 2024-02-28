@@ -20,12 +20,6 @@
     enabled: true
   listen: "pacman packages installed"
 
-- name: Set virt network autostart for a VM
-  become: true
-  ansible.builtin.command: virsh net-autostart default
-  listen: "reboot done"
-  changed_when: true
-
 - name: Build bat cache
   ansible.builtin.command: bat cache --build
   listen: "reboot done"
