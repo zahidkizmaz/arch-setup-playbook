@@ -14,12 +14,6 @@
     state: directory
     mode: "u=rwx,g=rx,o=rx"
 
-- name: Create autorandr config folder
-  ansible.builtin.file:
-    path: ~/.config/autorandr/
-    state: directory
-    mode: "u=rwx,g=rx,o=rx"
-
 - name: Create symlinks to config files
   ansible.builtin.command: stow --adopt -RSt ~ {{ item }}
   register: stow_result
