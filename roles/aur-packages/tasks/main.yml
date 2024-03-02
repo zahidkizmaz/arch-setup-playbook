@@ -24,7 +24,6 @@
   become: true
   become_user: "{{ ansible_user }}"
   loop: "{{ aur_packages }}"
-  notify: "AUR packages installed"
   register: install_aur_packages
   until: "install_aur_packages is not failed"
   delay: 5

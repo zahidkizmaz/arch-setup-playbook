@@ -1,7 +1,0 @@
----
-- name: Enable ly service
-  become: true
-  ansible.builtin.service:
-    name: "ly.service"
-    enabled: true
-  listen: "AUR packages installed"
