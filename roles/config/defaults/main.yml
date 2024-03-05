@@ -12,18 +12,14 @@ config_packages:
   - starship
   - tmux
   - rofi
-  - xorg
+  - hypr
   - zsh
   - fzf
   - bat
   - btop
   - dunst
-  - bspwm
-  - sxhkd
-  - polybar
-  - autorandr
+  - waybar
   - gtk-3.0
-  - libinput-gestures
 
 config_pipx_packages:
   - ansible-base

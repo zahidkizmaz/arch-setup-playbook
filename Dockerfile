@@ -1,7 +1,7 @@
 FROM docker.io/library/archlinux:latest
 
 RUN pacman -Syyu --noconfirm
-RUN pacman -S --noconfirm ansible sudo xorg xorg-server
+RUN pacman -S --noconfirm ansible sudo
 
 RUN echo '%wheel ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 RUN useradd --create-home -G wheel batman

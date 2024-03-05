@@ -34,9 +34,9 @@
   changed_when: |
     updated_mise_plugins.stdout != ""
 
-- name: Update mise installations
+- name: Upgrade mise installations
   ansible.builtin.shell:
-    cmd: mise plugins update
+    cmd: mise upgrade
     executable: /bin/zsh
   register: updated_mise_installations
   changed_when: |

@@ -16,6 +16,7 @@
   until: "install_pacman_packages_result is not failed"
   delay: 5
   retries: 3
+  tags: pacman_install
 
 - name: Install latest stable rust
   ansible.builtin.command: rustup default stable

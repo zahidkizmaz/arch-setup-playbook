@@ -4,100 +4,107 @@ pacman_packages:
   ######## DEV TOOLS #########
   ############################
   - atuin
-  - git
-  - man-db
-  - dash
-  - zsh
-  - stow
-  - starship
   - bat
-  - fd
-  - neovim
-  - fzf
-  - ripgrep
-  - git-delta
-  - python-pipx
-  - tree
-  - jq
-  - shfmt
-  - tmux
   - btop
   - ctags
   - curl
-  - wget
-  - stylua
-  - luarocks
-  - zip
-  - unzip
+  - dash
   - docker
   - docker-compose
-  - viu
-  - zoxide
+  - fd
+  - fzf
+  - git
   - gitui
+  - jq
+  - luarocks
+  - man-db
+  - neovim
+  - python-pipx
+  - ripgrep
   - rustup
+  - shfmt
+  - starship
+  - stow
+  - stylua
+  - tmux
+  - tree
+  - unzip
+  - viu
+  - wget
+  - zip
+  - zoxide
+  - zsh
+  #############################
+  ######## DESKTOP ENV ########
+  #############################
+  # Window Manager
+  - hyprland
+  - wayland
+  - waybar
+  - polkit-kde-agent
+  - xdg-desktop-portal-hyprland
+  - qt5-wayland
+  - qt6-wayland
+  - wl-clipboard
+  # Hardware Controllers
+  - pipewire
+  - pipewire-pulse
+  - wireplumber  # pipewire session manager
+  - pavucontrol
+  - playerctl
+  - bluez-utils
+  - brightnessctl
+  # Applets
+  - network-manager-applet
+  - blueman
+  # Helpers
+  - dunst
+  - copyq
+  # Desktop Applications
+  - firefox
+  - pcmanfm
+  # Screenshot
+  - grim
+  - slurp
+  # Lock screen
+  - swaylock
+  - swayidle
   ############################
   ######## ARCH TOOLS ########
   ############################
   - base-devel
-  - polkit
-  - polkit-gnome
-  - polybar
-  - sxhkd
-  - bspwm
-  - ly
-  - reflector
-  - brightnessctl
-  - alsa-utils
-  - jack2
-  - pavucontrol
-  - picom
-  - nitrogen
-  - rofi
-  - autorandr
+  - dnsmasq
+  - flatpak
   - gnupg
-  - copyq
-  - xclip
-  - dunst
   - neofetch
-  - playerctl
-  - bluez-utils
+  - reflector
+  ################################
+  ### FONTS & TEHEMES & EMOJIS ###
+  ################################
+  - arc-gtk-theme
+  - noto-fonts-emoji
+  - papirus-icon-theme
+  - ttf-cascadia-code-nerd
+  - ttf-iosevkaterm-nerd
+  - ttf-jetbrains-mono-nerd
+  - ttf-noto-nerd
+  ############################
+  ### TERMINAL EMULATORS #####
+  ############################
+  - alacritty
+  - kitty
+  - wezterm
+  ############################
+  ######## VM SETUP ##########
+  ############################
+  - edk2-ovmf
+  - libvirt
+  - qemu-desktop
+  - virt-manager
+  ############################
+  ######## PRINTER ###########
+  ############################
   - cups
   - cups-pdf
   - gutenprint
   - system-config-printer
-  - flatpak
-  - libxcb
-  - xcb-util
-  - xcb-util-wm
-  - xcb-util-keysyms
-  ##############################
-  ### FONTS & ICONS & EMOJIS ###
-  ##############################
-  - noto-fonts
-  - ttf-cascadia-code-nerd
-  - ttf-jetbrains-mono-nerd
-  - ttf-iosevkaterm-nerd
-  - ttf-noto-nerd
-  ############################
-  ### DESKTOP APPLICATIONS ###
-  ############################
-  - arandr
-  - firefox
-  - kitty
-  - wezterm
-  - alacritty
-  - pcmanfm
-  - network-manager-applet
-  - blueman
-  - sxiv
-  - dmenu
-  - galculator
-  - virt-manager
-  - qemu-desktop
-  - libvirt
-  - edk2-ovmf
-  - dnsmasq
-  - flameshot
-  - arc-gtk-theme
-  - papirus-icon-theme
-  - lxappearance

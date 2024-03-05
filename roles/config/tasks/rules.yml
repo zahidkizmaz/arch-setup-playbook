@@ -15,10 +15,3 @@
   vars:
     backlight: "{{ backlight_result.files.0.path | basename }}"
   when: backlight_result.files != []
-
-- name: Create touchpad settings
-  become: true
-  ansible.builtin.template:
-    src: 30-touchpad.conf.j2
-    dest: "/etc/X11/xorg.conf.d/30-touchpad.conf"
-    mode: "u=rw,g=r,o=r"

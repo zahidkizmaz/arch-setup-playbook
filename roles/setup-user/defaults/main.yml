@@ -4,6 +4,10 @@ user_groups:
   - audio
   - video
   - docker
+  - lp
+  - kvm
+  - wheel
+  - input
   - libvirt
   - optical
   - storage
