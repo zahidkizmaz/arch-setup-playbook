@@ -69,6 +69,8 @@ pacman_packages:
   # Lock screen
   - swaylock
   - swayidle
+  # Power management
+  - acpica
   ############################
   ######## ARCH TOOLS ########
   ############################
