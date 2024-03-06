@@ -54,6 +54,7 @@ pacman_packages:
   - playerctl
   - bluez-utils
   - brightnessctl
+  - usbutils
   # Applets
   - network-manager-applet
   - blueman
