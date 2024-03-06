@@ -11,7 +11,7 @@ config_packages:
   - pgcli
   - starship
   - tmux
-  - rofi
+  - tofi
   - hypr
   - zsh
   - fzf
