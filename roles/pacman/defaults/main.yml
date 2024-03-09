@@ -6,6 +6,7 @@ pacman_packages:
   - atuin
   - bat
   - btop
+  - clang
   - ctags
   - curl
   - dash
@@ -55,6 +56,7 @@ pacman_packages:
   - bluez-utils
   - brightnessctl
   - usbutils
+  - power-profiles-daemon
   # Applets
   - network-manager-applet
   - blueman
@@ -63,7 +65,7 @@ pacman_packages:
   - copyq
   # Desktop Applications
   - firefox
-  - pcmanfm
+  - pcmanfm-gtk3
   # Screenshot
   - grim
   - slurp
