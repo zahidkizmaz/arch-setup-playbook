@@ -5,3 +5,4 @@ aur_packages:
   - apple_cursor
   - shellcheck-bin
   - epson-inkjet-printer-escpr  # Epson WF-2830 drivers
+  - catppuccin-gtk-theme-mocha
