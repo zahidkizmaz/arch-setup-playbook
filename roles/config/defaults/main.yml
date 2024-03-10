@@ -2,6 +2,7 @@
 config_packages:
   - alacritty
   - ctags
+  - efm-langserver
   - git
   - gitui
   - mise
