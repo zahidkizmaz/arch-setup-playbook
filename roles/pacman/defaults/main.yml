@@ -70,6 +70,7 @@ pacman_packages:
   # Screenshot
   - grim
   - slurp
+  - feh  # image viewer
   # Lock screen
   - swaylock
   - swayidle
