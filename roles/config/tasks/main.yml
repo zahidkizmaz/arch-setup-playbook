@@ -23,12 +23,6 @@
     apply:
       tags: dotfiles
 
-- name: Setup ZSH
-  ansible.builtin.include_tasks:
-    file: zsh.yml
-    apply:
-      tags: zsh
-
 - name: Install mise managed runtimes and packages
   ansible.builtin.include_tasks:
     file: mise.yml
