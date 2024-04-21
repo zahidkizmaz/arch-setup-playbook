@@ -15,6 +15,7 @@ pacman_packages:
   - fd
   - fzf
   - git
+  - git-delta
   - gitui
   - jq
   - luarocks
@@ -71,9 +72,6 @@ pacman_packages:
   - grim
   - slurp
   - feh  # image viewer
-  # Lock screen
-  - swaylock
-  - swayidle
   # Power management
   - acpica
   ############################
