@@ -10,13 +10,13 @@ After a fresh arch installation and before running the playbook, you may follow 
 
 1. Add your non-root user to sudo (wheel) group. This user also will be used as an ansible user.
 2. Install dependencies:
-    ```shell
-    pacman -S openssh python python-pip
-    ```
+   ```shell
+   pacman -S openssh python python-pip
+   ```
 3. Enable ssh service:
-    ```shell
-    systemctl enable sshd
-    ```
+   ```shell
+   systemctl enable sshd
+   ```
 
 ### Host Machine:
 
@@ -32,9 +32,9 @@ ssh-copy-id {{user name}}@{{ ip of the destination machine}}
 ```yml
 ---
 all:
-    hosts:
-        { { host_address } }:
-            ansible_user: { { user_name } }
+  hosts:
+    { { host_address } }:
+      ansible_user: { { user_name } }
 ```
 
 #### Install ansible
@@ -77,16 +77,16 @@ This updates all the packages installed by playbook.
 
 Such as:
 
--   AUR packages
--   pacman packages
--   zsh plugins
--   pipx packages
--   flatpak packages
--   mise plugins
--   tmux plugins
--   npm global plugins
--   rust programming language
--   nvim packages and tree sitter grammars
+- AUR packages
+- pacman packages
+- zsh plugins
+- pipx packages
+- flatpak packages
+- mise plugins
+- tmux plugins
+- npm global plugins
+- rust programming language
+- nvim packages and tree sitter grammars
 
 #### Run the update playbook remotely
 
@@ -109,4 +109,4 @@ docker build . -t dev_env
 docker run --it dev_env
 ```
 
-This doesn't include __flatpak__ role due to limitations of docker.
+This doesn't include **flatpak** role due to limitations of docker.
