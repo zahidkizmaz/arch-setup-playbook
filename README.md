@@ -1,6 +1,7 @@
 # My Personal Arch Linux Setup Playbook
 
-## Archived because I moved to NixOS.
+> [!WARNING]
+> Archived because I moved to NixOS.
 
 ![desktop](https://user-images.githubusercontent.com/15658403/184225285-cebcbfde-e5f2-427d-a71a-8a817a4b2c2e.png)
 
