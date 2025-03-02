@@ -13,6 +13,29 @@
     enabled: true
   listen: "pacman packages installed"
 
+- name: Enable power-profiles-daemon service
+  become: true
+  ansible.builtin.service:
+    name: "power-profiles-daemon.service"
+    enabled: true
+  listen: "pacman packages installed"
+  ignore_errors: true
+
+- name: Enable bluetooth service
+  become: true
+  ansible.builtin.service:
+    name: "blueetooth.service"
+    enabled: true
+  listen: "pacman packages installed"
+  ignore_errors: true
+
+- name: Enable ssh-agent service for user
+  ansible.builtin.service:
+    name: "ssh-agent.service"
+    enabled: true
+  listen: "pacman packages installed"
+  ignore_errors: true
+
 - name: Updated pacman packages
   ansible.builtin.debug:
     var: updated_pacman_packages.packages

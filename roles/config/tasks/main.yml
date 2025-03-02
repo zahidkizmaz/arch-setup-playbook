@@ -23,12 +23,6 @@
     apply:
       tags: dotfiles
 
-- name: Setup ZSH
-  ansible.builtin.include_tasks:
-    file: zsh.yml
-    apply:
-      tags: zsh
-
 - name: Install mise managed runtimes and packages
   ansible.builtin.include_tasks:
     file: mise.yml
@@ -46,12 +40,6 @@
     file: tmux.yml
     apply:
       tags: tmux
-
-- name: Install auto-cpufreq
-  ansible.builtin.include_tasks:
-    file: auto-cpufreq.yml
-    apply:
-      tags: auto-cpufreq
 
 - name: Setup neovim
   ansible.builtin.include_tasks:

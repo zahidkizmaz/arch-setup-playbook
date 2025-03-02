@@ -1,13 +1,14 @@
 ---
 - name: Update zsh plugins
-  ansible.builtin.git:
-    repo: "{{ item.repo }}"
-    dest: "{{ item.dest }}"
-    version: master
-    update: true
-    force: true
-    clone: true
-  loop: "{{ config_zsh_plugins }}"
+  ansible.builtin.shell:
+    cmd: >
+     source {{ zshrc_location }} &&
+     zeesh-update
+    executable: /bin/zsh
+  register: zeesh_update
+  changed_when: "'Updated' in zeesh_update.stdout"
+  vars:
+    zshrc_location: "~/Projects/dotfiles/zsh/.config/zsh/.zshrc"
 
 - name: Update pipx packages
   ansible.builtin.command: pipx upgrade-all

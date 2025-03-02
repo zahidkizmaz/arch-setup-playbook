@@ -2,6 +2,7 @@
 config_packages:
   - alacritty
   - ctags
+  - efm-langserver
   - git
   - gitui
   - mise
@@ -11,7 +12,7 @@ config_packages:
   - pgcli
   - starship
   - tmux
-  - rofi
+  - tofi
   - hypr
   - zsh
   - fzf
@@ -47,9 +48,3 @@ config_npm_packages:
   - neovim
   - eslint
   - "@fsouza/prettierd"
-
-config_zsh_plugins:
-  - repo: https://github.com/zsh-users/zsh-autosuggestions
-    dest: "~/.config/zsh/plugins/zsh-autosuggestions"
-  - repo: https://github.com/zsh-users/zsh-syntax-highlighting
-    dest: "~/.config/zsh/plugins/zsh-syntax-highlighting"
